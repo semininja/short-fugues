@@ -1,10 +1,10 @@
 publish: score parts midi
 
-score: global.ily music.ily ../score.ly
-	lilypond ../score.ly
+score: music.ily ../global.ily ../score.ily
+	lilypond ../score.ily
 
-parts: global.ily music.ily ../parts.ly
-	lilypond ../parts.ly
+parts: music.ily ../global.ily ../parts.ily
+	lilypond ../parts.ily
 
-midi: global.ily music.ily ../midi.ly
-	lilypond ../midi.ly
+midi: music.ily ../midi.ily
+	lilypond ../midi.ily

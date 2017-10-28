@@ -3,6 +3,11 @@
 
 \bookOutputName "BWV553"
 
+\header {
+  title = "Prelude & Fugue No. 1"
+  subtitle = "BWV 553"
+}
+
 prelude = {
   \key c \major
   \time 4/4

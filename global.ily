@@ -1,9 +1,6 @@
-%BWV 553
 \version "2.19.80"
 
 \header {
-  title = "Prelude & Fugue No. 1"
-  subtitle = "BWV 553"
   composer = "J. S. Bach"
   arranger = "Arr. Nikolai Hedler"
   copyright = "Copyright © Nikolai Hedler 2017 CC BY-NC-SA 4.0"
