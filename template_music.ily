@@ -51,7 +51,7 @@ tptBfug = {
   }
 }
 hnpre = {
-  \relative f' {
+  \relative f {
     \transposition c'
     
   }

@@ -148,7 +148,7 @@ tptAfug = {
     dis2 e4 ~ |
     e2 dis4 |
     e2 g, fis |
-    e\breve |
+    e\breve
   }
 }
 tptBpre = {
@@ -248,12 +248,12 @@ tptBfug = {
       r2 g,4 |
       a g fis |
       g2 e dis|
-      b\breve |
+      b\breve
     }
   }
 }
 hnpre = {
-  \relative f' {
+  \relative f {
     \transposition c'
     r4 g' fis b, ~ |
     b r8 b c4 c |
@@ -330,7 +330,7 @@ hnfug = {
     fis g4 |
     fis e dis |
     e2 r b |
-    e\breve |
+    e\breve
   }
 }
 euphpre = {
@@ -412,7 +412,7 @@ euphfug = {
     b2 b4 |
     c b a |
     b2 b2. a4 |
-    g\breve |
+    g\breve
   }
 }
 tubapre = {
