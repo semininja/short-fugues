@@ -1,5 +1,5 @@
 %An arrangement of J. S. Bach's Short Prelude & Fugue No. 1 for brass quintet
-\version "2.19.65"
+\version "2.19.80"
 \include "articulate.ly"
 #(set-global-staff-size 16)
 head = \header {
@@ -408,10 +408,7 @@ tubafug = {
 \bookpart { %Score
   \head
   \score { %Prelude
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \new StaffGroup <<
         \new Staff \with {
           instrumentName = #"Trumpet 1"
@@ -463,10 +460,7 @@ tubafug = {
     }
   }
   \score { %Fugue
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \new StaffGroup <<
         \new Staff \with {
           instrumentName = #"Trumpet 1"
@@ -587,10 +581,7 @@ tubafug = {
     instrument = "Trumpet 1"
   }
   \score { %Prelude
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \transpose bes c'
       \tptApre
     }
@@ -598,14 +589,11 @@ tubafug = {
       piece = \markup { \fontsize #2 \bold "Prelude"}
     }
     \layout {
-      #(layout-set-staff-size 20)
+      #(layout-set-staff-size 18)
     }
   }
   \score { %Fugue
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \transpose bes c'
       \tptAfug
     }
@@ -631,10 +619,7 @@ tubafug = {
     instrument = "Trumpet 2"
   }
   \score { %Prelude
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \transpose bes c'
       \tptBpre
     }
@@ -642,14 +627,11 @@ tubafug = {
       piece = \markup { \fontsize #2 \bold "Prelude"}
     }
     \layout {
-      #(layout-set-staff-size 20)
+      #(layout-set-staff-size 18)
     }
   }
   \score { %Fugue
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \transpose bes c'
       \tptBfug
     }
@@ -675,10 +657,7 @@ tubafug = {
     instrument = "Horn in F"
   }
   \score { %Prelude
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \transpose f c'
       \hnpre
     }
@@ -686,14 +665,11 @@ tubafug = {
       piece = \markup { \fontsize #2 \bold "Prelude"}
     }
     \layout {
-      #(layout-set-staff-size 20)
+      #(layout-set-staff-size 18)
     }
   }
   \score { %Fugue
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \transpose f c'
       \hnfug
     }
@@ -719,24 +695,18 @@ tubafug = {
     instrument = "Euphonium"
   }
   \score { %Prelude
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \euphpre
     }
     \header {
       piece = \markup { \fontsize #2 \bold "Prelude"}
     }
     \layout {
-      #(layout-set-staff-size 20)
+      #(layout-set-staff-size 18)
     }
   }
   \score { %Fugue
-    \new Score \with {
-      markFormatter = #format-mark-box-barnumbers
-    }
-    {
+    \new Score {
       \euphfug
     }
     \header {
