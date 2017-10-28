@@ -1,4 +1,3 @@
-%BWV 555
 \version "2.19.80"
 
 \include "global.ily"

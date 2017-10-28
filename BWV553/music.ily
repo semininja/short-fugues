@@ -1,6 +1,8 @@
 %BWV 553
 \version "2.19.80"
 
+\bookOutputName "BWV553"
+
 prelude = {
   \key c \major
   \time 4/4

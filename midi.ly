@@ -1,11 +1,9 @@
-%BWV 555
 \version "2.19.80"
 
 \include "music.ily"
 \include "articulate.ly"
 
 \book {
-  \bookOutputName "BWV553"
   \score {
     \articulate
     \unfoldRepeats
