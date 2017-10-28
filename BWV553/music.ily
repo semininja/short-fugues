@@ -156,7 +156,6 @@ tptBfug = {
   \new Voice { % manually created to avoid \partial bug
     \relative f' {
       \transposition c'
-      \time 4/4
       \cueDuring #"tptA" #UP { r8 r4 |
       R1 |
       r2 } r8 g g g |
