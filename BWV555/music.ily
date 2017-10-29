@@ -117,7 +117,7 @@ tptAfug = {
     cis4 a'8 g fis e |
     dis2 e4 ~ |
     e2 dis4 
-    e d? c |
+    e d c |
     b2. |
     a |
     g2 fis4 |
@@ -168,7 +168,7 @@ tptBpre = {
     fis'8 d e fis g a b4 ~ |
     b8 b a g fis d g fis |
     e c fis e dis b e4 ~ |
-    e8 e d?4 cis cis |
+    e8 e d4 cis cis |
     d8 r8 r4 r2 |
     R1*2 |
     e4 e'2 d4 ~ |
@@ -255,8 +255,8 @@ tptBfug = {
 hnpre = {
   \relative f {
     \transposition c'
-    r4 g' fis b, ~ |
-    b r8 b c4 c |
+    r4 g' fis fis, |
+    g r8 b c4 c |
     b r r2 |
     R1*2 |
     R2 |
@@ -290,11 +290,11 @@ hnfug = {
     a2 ais4 |
     b cis d |
     cis e8 d cis4 |
-    b d8 c? b a |
+    b d8 c b a |
     gis4 e'8 d cis b |
     ais2 b4 ~ |
     b2 ais4 |
-    b2 ~ b8 a? |
+    b2 ~ b8 a |
     g4 fis2 |
     fis2. |
     g |
@@ -317,7 +317,12 @@ hnfug = {
     fis2 f4 |
     e a gis |
     e8 c f d b4 |
-    R2.*6 |
+    e,4 a8 g f e |
+    d4 g2 ~ |
+    g4 a2 ~ |
+    a4 b2 ~ |
+    b8 b e d c b |
+    a2 r4 |
     b4 e4. d8 |
     cis4 fis4. e8 |
     d4 g8 fis e d |
@@ -337,8 +342,8 @@ euphpre = {
   \relative f {
     \clef bass
     \transposition c'
-    r4 g a fis |
-    g r8 e e4 a8 g |
+    r4 g a b ~ |
+    b r8 e, e4 a8 g |
     fis4 r8 g fis4 b ~ |
     b b e,4. fis8 |
     g4 fis e gis |
@@ -369,10 +374,18 @@ euphfug = {
   \relative f {
     \clef bass
     \transposition c'
-    R2.*19 |
-    \cueDuringWithClef #"tuba" #DOWN #"bass_8" { R2.*8 } |
-    R2. |
-    b2. |
+    R2.*15 |
+    \cueDuring #"hn" #UP { R2.*4 } |
+    b,2. |
+    cis |
+    d2 dis4 |
+    e2 eis4 |
+    fis e d |
+    e cis fis |
+    b, cis d |
+    e fis fis, |
+    b2 r4 |
+    b'2. |
     cis2. |
     d2. |
     r8 c b a b4 |
@@ -397,14 +410,17 @@ euphfug = {
     b8 cis d4  d, |
     a'8 b c d e d |
     c a d b e e, |
-    e'4 a8 g f e |
-    d4 g2 ~ |
-    g4 a2 ~ |
-    a4 b2 ~ |
-    b8 b e d c b |
-    a2 cis4 |
-    b4 r2 |
-    R2.*4 |
+    a2. |
+    b |
+    c2 cis4 |
+    d2 dis4 |
+    e2. |
+    fis2. |
+    g2 gis4 |
+    a2 ais4 |
+    b2. ~ |
+    b4 ais2 |
+    fis2 r4 |
     r8 b c b a g |
     a4. e'8 d c |
     b2. |
@@ -420,9 +436,9 @@ tubapre = {
     \clef "bass"
     \transposition c'
     e2 fis4 b, |
-    e r8 g, a2 |
+    e r8 g a2 |
     b1 |
-    e4 d c2 |
+    e,4 d c2 |
     b e |
     a,4 c |
     d2. d4 |

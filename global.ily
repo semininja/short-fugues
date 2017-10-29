@@ -33,6 +33,7 @@
   \context {
     \Staff
     \RemoveEmptyStaves
+    \accidentalStyle modern-cautionary
   }
   
   \context {
