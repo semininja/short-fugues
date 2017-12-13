@@ -453,10 +453,10 @@ tubapre = {
     b b'2 ais4 |
     b g2 fis4 ~ |
     fis e2 dis4 |
-    e e a, d |
+    e e' a, d |
     g, c fis, b |
     e, a d, g |
-    c cis d dis |
+    c, cis d dis |
     e r b r |
     e r a, r |
     a g8 a b2 |
