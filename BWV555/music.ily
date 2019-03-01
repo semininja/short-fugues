@@ -185,7 +185,7 @@ tptBfug = {
   \new Voice { % manually created to avoid \partial bug
     \relative f' {
       \transposition c'
-      \cueDuring #"tptA" #UP { R2.*7 } |
+      \transposedCueDuring #"tptA" #UP c' { R2.*7 } |
       b,2. |
       cis |
       d2 dis4 |
@@ -283,7 +283,7 @@ hnfug = {
   \relative f {
     \transposition c'
     R2.*7 |
-    \cueDuring #"tptB" #DOWN { R2.*8 } |
+    \transposedCueDuring #"tptB" #DOWN c' { R2.*8 } |
     e2. |
     fis |
     g2 gis4 |
@@ -340,7 +340,6 @@ hnfug = {
 }
 euphpre = {
   \relative f {
-    \clef bass
     \transposition c'
     r4 g a b ~ |
     b r8 e, e4 a8 g |
@@ -372,10 +371,9 @@ euphpre = {
 }
 euphfug = {
   \relative f {
-    \clef bass
     \transposition c'
     R2.*15 |
-    \cueDuring #"hn" #UP { R2.*4 } |
+    \transposedCueDuring #"hn" #UP c' { R2.*4 } |
     b,2. |
     cis |
     d2 dis4 |
@@ -468,7 +466,7 @@ tubafug = {
     \clef "bass"
     \transposition c'
     R2.*15 |
-    \cueDuringWithClef #"hn" #UP #"bass" { R2.*4 | } 
+    \transposedCueDuring #"hn" #UP c { R2.*4 | } 
     b,2. |
     cis |
     d2 dis4 |
