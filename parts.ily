@@ -86,6 +86,30 @@
   }
 }
 \book {
+  \bookOutputSuffix "euph-high"
+  \header { instrument = "Euphonium 2" }
+  \score {
+    \header { piece = "Prelude" }
+    \new Staff {
+      \clef "bass"
+      <<
+        \prelude
+        \hnpre
+      >>
+    }
+  }
+  \score {
+    \header { piece = "Fugue" }
+    \new Staff {
+      \clef "bass"
+      <<
+        \fugue
+        \hnfug
+      >>
+    }
+  }
+}
+\book {
   \bookOutputSuffix "euph-treble"
   \header { instrument = "Euphonium T.C." }
   \score {
