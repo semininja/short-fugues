@@ -63,7 +63,7 @@
 }
 \book {
   \bookOutputSuffix "horn"
-  \header { instrument = "Horn in F" }
+  \header { instrument = "F Horn" }
   \score {
     \header { piece = "Prelude" }
     \new Staff {
@@ -86,11 +86,37 @@
   }
 }
 \book {
-  \bookOutputSuffix "euph"
-  \header { instrument = "Euphonium" }
+  \bookOutputSuffix "euph-high"
+  \header { instrument = "Euphonium 2" }
   \score {
     \header { piece = "Prelude" }
     \new Staff {
+      \clef "bass"
+      <<
+        \prelude
+        \hnpre
+      >>
+    }
+  }
+  \score {
+    \header { piece = "Fugue" }
+    \new Staff {
+      \clef "bass"
+      <<
+        \fugue
+        \hnfug
+      >>
+    }
+  }
+}
+\book {
+  \bookOutputSuffix "euph-treble"
+  \header { instrument = "Euphonium T.C." }
+  \score {
+    \header { piece = "Prelude" }
+    \new Staff {
+      \clef "treble"
+      \transpose bes c''
       <<
         \prelude
         \euphpre
@@ -100,6 +126,32 @@
   \score {
     \header { piece = "Fugue" }
     \new Staff {
+      \clef "treble"
+      \transpose bes c''
+      <<
+        \fugue
+        \euphfug
+      >>
+    }
+  }
+}
+\book {
+  \bookOutputSuffix "euph"
+  \header { instrument = "Euphonium" }
+  \score {
+    \header { piece = "Prelude" }
+    \new Staff {
+      \clef "bass"
+      <<
+        \prelude
+        \euphpre
+      >>
+    }
+  }
+  \score {
+    \header { piece = "Fugue" }
+    \new Staff {
+      \clef "bass"
       <<
         \fugue
         \euphfug
@@ -113,6 +165,7 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
+      \clef "bass"
       <<
         \prelude
         \tubapre
@@ -122,6 +175,7 @@
   \score {
     \header { piece = "Fugue" }
     \new Staff {
+      \clef "bass"
       <<
         \fugue
         \tubafug

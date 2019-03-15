@@ -51,6 +51,7 @@
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
       } {
+        \clef "bass"
         <<
           \prelude
           \euphpre
@@ -60,6 +61,7 @@
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
       } {
+        \clef "bass"
         <<
           \prelude
           \tubapre
@@ -71,7 +73,6 @@
 \score { %Fugue
   \header { piece = "Fugue" }
   \new Score {
-    \killCues
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = #"Trumpet 1"
@@ -107,6 +108,7 @@
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
       } {
+        \clef "bass"
         <<
           \fugue
           \euphfug
@@ -116,6 +118,7 @@
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
       } {
+        \clef "bass"
         <<
           \fugue
           \tubafug
