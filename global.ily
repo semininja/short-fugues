@@ -3,7 +3,7 @@
 \header {
   composer = "J. S. Bach"
   arranger = "Arr. Nikolai Hedler"
-  copyright = "Copyright © Nikolai Hedler 2017 CC BY-NC-SA 4.0"
+  copyright = "Copyright © Nikolai Hedler 2019 CC BY-NC-SA 4.0"
   tagline = ##f
 }
 
