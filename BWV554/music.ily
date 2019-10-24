@@ -282,7 +282,7 @@ euphfug = {
     f4 e8 d16 c g'8 f g g, |
     c e g8. f16 e8 c f4 |
     e8 f16 g a8 e f d b'16 a b g |
-    c4 r8 cis d4 ~ d16 c d b |
+    c4 r8 cis d4 ~ d16 c d bes |
     c8 d bes c c4 b8 c |
     c4 f,8 g a4 ~ a8 b16 a |
     g4 g a8 g16 f e8 g |
