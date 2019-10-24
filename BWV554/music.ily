@@ -223,7 +223,7 @@ hnfug = {
     a c g c a c f, a |
     bes4 a bes r8 bes |
     a4 b a r8 e' |
-    d4 e bes r |
+    d4 e a, r |
     r2 r4 cis |
     d8 c16 bes a4 r2 |
     R1*3 |
