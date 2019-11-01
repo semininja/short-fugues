@@ -15,7 +15,7 @@
 \score { %Prelude
   \header { piece = "Prelude" }
   \new Score {
-    \killCues
+    %\killCues
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = #"Trumpet 1"
@@ -73,6 +73,7 @@
 \score { %Fugue
   \header { piece = "Fugue" }
   \new Score {
+    %\killCues
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = #"Trumpet 1"
