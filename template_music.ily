@@ -1,5 +1,5 @@
 %BWV 55x
-\version "2.19.80"
+\version "2.19.82"
 
 \bookOutputName "BWV55x"
 
@@ -25,84 +25,97 @@ fugue = {
 }
 
 tptApre = {
-  \relative f' {
+  \new Voice \relative f' {
     \transposition c'
     
   }
 }
 tptAfug = {
-  \relative f' {
+  \new Voice \relative f' {
     \transposition c'
     
   }
 }
 tptBpre = {
-  \relative f' {
+  \new Voice \relative f' {
     \transposition c'
     
   }
 }
 tptBfug = {
-  \new Voice { % manually created to avoid \partial bug
-    \relative f' {
-      \transposition c'
-      
-    }
+  \new Voice \relative f' {
+    \transposition c'
+    
   }
 }
 hnpre = {
-  \relative f {
+  \new Voice \relative f {
     \transposition c'
     
   }
 }
 hnfug = {
-  \relative f {
+  \new Voice \relative f {
     \transposition c'
     
   }
 }
 euphpre = {
-  \relative f {
-    \clef bass
+  \new Voice \relative f {
     \transposition c'
     
   }
 }
 euphfug = {
-  \relative f {
-    \clef bass
+  \new Voice \relative f {
     \transposition c'
     
   }
 }
 tubapre = {
-  \relative f, {
-    \clef "bass"
+  \new Voice \relative f, {
     \transposition c'
     
   }
 }
 tubafug = {
-  \relative f, {
-    \clef "bass"
+  \new Voice \relative f, {
     \transposition c'
     
   }
 }
 
-\addQuote "tptA" {
+%{
+\addQuote "tptAp" {
+  \tptApre
+}
+\addQuote "tptBp" {
+  \tptBpre
+}
+\addQuote "hnp" {
+  \hnpre
+}
+\addQuote "euphp" {
+  \euphpre
+}
+\addQuote "tubap" {
+  \tubapre
+}
+%}
+%{
+\addQuote "tptAf" {
   \tptAfug
 }
-\addQuote "tptB" {
+\addQuote "tptBf" {
   \tptBfug
 }
-\addQuote "hn" {
+\addQuote "hnf" {
   \hnfug
 }
-\addQuote "euph" {
+\addQuote "euphf" {
   \euphfug
 }
-\addQuote "tuba" {
+\addQuote "tubaf" {
   \tubafug
 }
+%}
