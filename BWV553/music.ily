@@ -44,7 +44,6 @@ fugue = {
 
 tptApre = {
   \relative f' {
-    \transposition c'
     \repeat volta 2 {
       r16 c' b c g c b c e,4 r4 |
       r16 c' b c g c b c a8 r r4 |
@@ -84,7 +83,6 @@ tptApre = {
 }
 tptAfug = {
   \relative f' {
-    \transposition c'
     c'8 c c |
     e4 r8 d c c c b16 c |
     d4 r8 c b b b a16 b |
@@ -114,7 +112,6 @@ tptAfug = {
 }
 tptBpre = {
   \relative f' {
-    \transposition c'
     \repeat volta 2 {
       R1 |
       r2 a16 f e f c f e f |
@@ -153,40 +150,36 @@ tptBpre = {
   }
 }
 tptBfug = {
-  \new Voice { % manually created to avoid \partial bug
-    \relative f' {
-      \transposition c'
-      \transposedCueDuring #"tptA" #UP c' { r8 r4 |
-      R1 |
-      r2 r8 } g g g |
-      a4 r8 g f f f e16 f |
-      g4 r8 f e e e d16 e |
-      f8 c16 d e a g a f8 e16 d g8 f |
-      e g16 f e g f e g a g a b4 ~  |
-      b8 e, a g16 a fis g fis g a4 ~ |
-      a8 b16 a g a g f? e f e f g4 |
-      a r d,16 e d e f4 |
-      g r c,16 d c d e4 |
-      d16 e d e f4 e16 fis e fis d8 e16 d |
-      d4 r8 c d4 r |
-      R1*3
-      r8 g g g g g f4 |
-      e r fis8 fis e4 |
-      d r e8 e d e |
-      fis fis e fis gis gis r b |
-      e,4 e e r |
-      r8 a a a b4 r8 a |
-      g e16 f g a g f e8 e[ e e] |
-      e4 r8 e a a a g16 a |
-      g4 r8 d g g g f16 g |
-      f4 g g4. f8|
-      e1 |
-    }
+  \relative f' {
+    \cueDuring #"tptA" #UP { r8 r4 |
+    R1 |
+    r2 r8 } g g g |
+    a4 r8 g f f f e16 f |
+    g4 r8 f e e e d16 e |
+    f8 c16 d e a g a f8 e16 d g8 f |
+    e g16 f e g f e g a g a b4 ~  |
+    b8 e, a g16 a fis g fis g a4 ~ |
+    a8 b16 a g a g f? e f e f g4 |
+    a r d,16 e d e f4 |
+    g r c,16 d c d e4 |
+    d16 e d e f4 e16 fis e fis d8 e16 d |
+    d4 r8 c d4 r |
+    R1*3
+    r8 g g g g g f4 |
+    e r fis8 fis e4 |
+    d r e8 e d e |
+    fis fis e fis gis gis r b |
+    e,4 e e r |
+    r8 a a a b4 r8 a |
+    g e16 f g a g f e8 e[ e e] |
+    e4 r8 e a a a g16 a |
+    g4 r8 d g g g f16 g |
+    f4 g g4. f8|
+    e1 |
   }
 }
 hnpre = {
   \relative f' {
-    \transposition c'
     \repeat volta 2 {
       r2 r16 c b c g c b c |
       g4 r8 c c4 r |
@@ -226,10 +219,10 @@ hnpre = {
 }
 hnfug = {
   \relative f {
-    \transposition c'
     r8 r4 |
     R1 |
-    \transposedCueDuring #"tptB" #DOWN c { R1*4^"Tpt. 2" }
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuring #"tptB" #UP { R1*4 }
     r8 c' c c e4 r8 d |
     c c c b16 c d4 r8 c |
     b b b b c16 d c d e4 ~ |
@@ -253,7 +246,6 @@ hnfug = {
 }
 euphpre = {
   \relative f {
-    \transposition c'
     \repeat volta 2 {
       c1 |
       e4 r8 g a4 r |
@@ -293,10 +285,10 @@ euphpre = {
 }
 euphfug = {
   \relative f {
-    \transposition c'
     \partial 4. r8 r4 |
     R1*5 |
-    \transposedCueDuring #"hn" #DOWN c { r1^"Horn" r1 r1 }
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
+    \cueDuringWithClef #"hn" #UP "treble" { R1*3 }
     r8 a d c16 d b c b c d4 ~ |
     d8 r r4 r2 |
     b16 c b c d4 c16 d c8 b c16 b |
@@ -319,7 +311,6 @@ euphfug = {
 }
 tubapre = {
   \relative f, {
-    \transposition c'
     \repeat volta 2 {
       c1 ~ |
       c4 r8 e f4 r |
@@ -359,10 +350,10 @@ tubapre = {
 }
 tubafug = {
   \relative f, {
-    \transposition c'
     r8 r4 |
     R1*5 |
-    \transposedCueDuring #"hn" #UP c' { \cueClef #"treble_8" r1^"Horn" r \cueClefUnset }
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
+    \cueDuringWithClef #"hn" #UP #"treble" { R1*2 }
     r8 g g g a4 r8 g |
     f f f e16 f g4 r8 f |
     e e e d16 e f4 e8 f |

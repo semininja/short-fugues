@@ -8,6 +8,7 @@
     \articulate
     \unfoldRepeats
     \killCues
+    \removeWithTag #'part
     <<
         \new Staff \with {
           midiInstrument = "trumpet"

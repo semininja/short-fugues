@@ -39,7 +39,6 @@ fugue = {
 
 tptApre = {
   \relative f' {
-    \transposition c'
     d'4 r r8 d cis d |
     e4 r r8 a, g f16. e32 |
     f8 d' c bes a f' e d |
@@ -74,7 +73,6 @@ tptApre = {
 }
 tptAfug = {
   \relative f' {
-    \transposition c'
     \partial 8*5 a8 f a e a |
     d, f bes4 a8 b16 cis d4 ~ |
     d8 cis16 b a8 g f d16 e f g f g |
@@ -110,7 +108,6 @@ tptAfug = {
 }
 tptBpre = {
   \relative f' {
-    \transposition c'
     a4 r r8 a g a ~ |
     a16 a g f e r r8 r cis d a |
     d f e d c a' g f |
@@ -142,46 +139,43 @@ tptBpre = {
   }
 }
 tptBfug = {
-  \new Voice { % manually created to avoid \partial cue bug
-    \relative f' {
-      \transposition c'
-      \partial 8*5 r8 r2 |
-      r1 |
-      r2 r4 r8 d |
-      c e b e a, c f4 |
-      e8 fis16 gis a4 ~ a8 gis16 fis e8 d |
-      cis a b cis d4. cis8 |
-      d4 r8 d cis d16 e f4 |
-      e cis'8 b a4 f16 g a8 |
-      a4 b ~ b8 e, a4 |
-      gis8 a16 b c4 fis, gis |
-      a e f8 g16 f e4 ~ |
-      e e e r8 c' |
-      d b g4 a a, |
-      d g8 f16 e d4 r8 g |
-      e g d g c, e a4 |
-      g8 a16 b c4 ~ c8 b16 a g8 f |
-      e4 r8 e f4 ~ f16 e f d |
-      e8 f4 e8 a4 b8 g ~ |
-      g f16 e f4 e8 f16 g a4 |
-      d, e2 r8 d |
-      c4 d c r |
-      r2 r4 r8 d |
-      d4 d d r8 e |
-      e4 e e r8 a16 g |
-      f8 a e a d, f bes4 |
-      a8 b16 cis d4 ~ d8 cis16 b a8 g |
-      f4 r8 fis g4 a ~ |
-      a8 d, g4 fis8 g16 a bes4 |
-      e, f g d8 e16 d |
-      cis8 b16 cis d4 ~ d8 cis d4 ~ |
-      d cis a2 |
-    }
+  \relative f' {
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 1" } }
+    \cueDuring "tptA" #UP { \partial 8*5 r8 r2 |
+    R1 | }
+    r2 r4 r8 d |
+    c e b e a, c f4 |
+    e8 fis16 gis a4 ~ a8 gis16 fis e8 d |
+    cis a b cis d4. cis8 |
+    d4 r8 d cis d16 e f4 |
+    e cis'8 b a4 f16 g a8 |
+    a4 b ~ b8 e, a4 |
+    gis8 a16 b c4 fis, gis |
+    a e f8 g16 f e4 ~ |
+    e e e r8 c' |
+    d b g4 a a, |
+    d g8 f16 e d4 r8 g |
+    e g d g c, e a4 |
+    g8 a16 b c4 ~ c8 b16 a g8 f |
+    e4 r8 e f4 ~ f16 e f d |
+    e8 f4 e8 a4 b8 g ~ |
+    g f16 e f4 e8 f16 g a4 |
+    d, e2 r8 d |
+    c4 d c r |
+    r2 r4 r8 d |
+    d4 d d r8 e |
+    e4 e e r8 a16 g |
+    f8 a e a d, f bes4 |
+    a8 b16 cis d4 ~ d8 cis16 b a8 g |
+    f4 r8 fis g4 a ~ |
+    a8 d, g4 fis8 g16 a bes4 |
+    e, f g d8 e16 d |
+    cis8 b16 cis d4 ~ d8 cis d4 ~ |
+    d cis a2 |
   }
 }
 hnpre = {
   \relative f' {
-    \transposition c'
     f4 r r8 f e f |
     a,4 r16 d cis b a8 a[ d, a'] |
     a4 g a bes |
@@ -216,7 +210,6 @@ hnpre = {
 }
 hnfug = {
   \relative f' {
-    \transposition c'
     \partial 8*5 r8 r2 |
     R1*19 |
     r2 r4 r8 c |
@@ -232,7 +225,6 @@ hnfug = {
 }
 euphpre = {
   \relative f {
-    \transposition c'
     r16 d e f g a b cis d8 a g a |
     e4 r r8 a, b cis |
     d4 e f g |
@@ -268,10 +260,11 @@ euphpre = {
 }
 euphfug = {
   \relative f {
-    \transposition c'
     \partial 8*5 r8 r2 |
-    R1*4 |
-    r4 r8 a f a e a |
+    R1 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuring "tptB" #UP { R1*3
+    r4 r8 } a f a e a |
     d, f bes4 a8 b16 cis d4 ~ |
     d8 cis16 b a8 g f a d a |
     a4 gis a ~ a8 b |
@@ -301,8 +294,6 @@ euphfug = {
 }
 tubapre = {
   \relative f, {
-    \clef "bass"
-    \transposition c'
     d4 r r8 d e d |
     cis4 r r8 a b cis |
     d4 e f g |
@@ -331,10 +322,10 @@ tubapre = {
 }
 tubafug = {
   \relative f, {
-    \clef "bass"
-    \transposition c'
     \partial 8*5 r8 r2 |
-    R1*6 |
+    R1*4 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Euph" } }
+    \transposedCueDuring "euph" #UP c' { R1*2 }
     r2 r4 r8 d |
     c e b e a, c f4 |
     e8 fis16 gis a4 ~ a8 gis16 fis e8 d |

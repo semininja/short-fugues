@@ -25,62 +25,52 @@ fugue = {
 }
 
 tptApre = {
-  \new Voice \relative f' {
-    \transposition c'
+  \relative f' {
     
   }
 }
 tptAfug = {
-  \new Voice \relative f' {
-    \transposition c'
+  \relative f' {
     
   }
 }
 tptBpre = {
-  \new Voice \relative f' {
-    \transposition c'
+  \relative f' {
     
   }
 }
 tptBfug = {
-  \new Voice \relative f' {
-    \transposition c'
+  \relative f' {
     
   }
 }
 hnpre = {
-  \new Voice \relative f {
-    \transposition c'
+  \relative f {
     
   }
 }
 hnfug = {
-  \new Voice \relative f {
-    \transposition c'
+  \relative f {
     
   }
 }
 euphpre = {
-  \new Voice \relative f {
-    \transposition c'
+  \relative f {
     
   }
 }
 euphfug = {
-  \new Voice \relative f {
-    \transposition c'
+  \relative f {
     
   }
 }
 tubapre = {
-  \new Voice \relative f, {
-    \transposition c'
+  \relative f, {
     
   }
 }
 tubafug = {
-  \new Voice \relative f, {
-    \transposition c'
+  \relative f, {
     
   }
 }
