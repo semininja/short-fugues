@@ -49,7 +49,6 @@ fugue = {
 
 tptApre = {
   \relative f' {
-    \transposition c'
     r4 b a4. b8 |
     g4. g8 ~ g g fis e |
     dis b b'4 a4. b8|
@@ -80,7 +79,6 @@ tptApre = {
 }
 tptAfug = {
   \relative f' {
-    \transposition c'
     e2. | fis |
     g2 gis4 |
     a2 ais4 |
@@ -153,7 +151,6 @@ tptAfug = {
 }
 tptBpre = {
   \relative f' {
-    \transposition c'
     r4 e4 ~ e8 e dis4 |
     r8 b e e e4 c |
     b4 e ~ e8 e dis4 |
@@ -182,79 +179,76 @@ tptBpre = {
   }
 }
 tptBfug = {
-  \new Voice { % manually created to avoid \partial bug
-    \relative f' {
-      \transposition c'
-      \transposedCueDuring #"tptA" #UP c' { R2.*7 } |
-      b,2. |
-      cis |
-      d2 dis4 |
-      e2 eis4 |
-      fis e d |
-      e cis fis |
-      dis b e ~ |
-      e2 dis4 |
-      e2 g4 |
-      a2. ~ |
-      a4 g8 fis e d |
-      cis4 a'8 g fis e |
-      d4 e fis |
-      e r e |
-      fis2. |
-      gis |
-      ais2 fis4 |
-      g2 fis4 |
-      fis2 fis4 |
-      e e2 |
-      d2. |
-      R2.*2 |
-      r2 dis4 |
-      e2 e4 ~ |
-      e d c |
-      R2.*2 |
-      r2 g'4 |
-      a g fis |
-      g gis e |
-      fis2. |
-      e |
-      e2 d4 |
-      cis cis2 |
-      b2 r4 |
-      R2. |
-      R2. |
-      dis2 d4 |
-      cis2 c4 |
-      b4 cis8 d e fis |
-      e d cis dis e fis |
-      gis4 gis8 a b cis |
-      d4 fis,8 g a b |
-      c2 b4 |
-      a2 ~ a8 gis |
-      c,8 d e4 a ~ |
-      a8 c b a g f |
-      e2. |
-      d4 fis2 |
-      e4 r e ~ |
-      e8 e a g fis e |
-      d e16 fis g8 a b4 ~ |
-      b8 a16 gis a8 b cis4 ~ |
-      cis8 b16 ais b8 a g fis |
-      g4 fis2 |
-      fis r4 |
-      e'2. |
-      d2. ~ |
-      d4 r2 |
-      R2. |
-      r2 g,4 |
-      a g fis |
-      g2 e dis|
-      b\breve
-    }
+  \relative f' {
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 1" } }
+    \cueDuring #"tptA" #UP { R2.*7 } |
+    b,2. |
+    cis |
+    d2 dis4 |
+    e2 eis4 |
+    fis e d |
+    e cis fis |
+    dis b e ~ |
+    e2 dis4 |
+    e2 g4 |
+    a2. ~ |
+    a4 g8 fis e d |
+    cis4 a'8 g fis e |
+    d4 e fis |
+    e r e |
+    fis2. |
+    gis |
+    ais2 fis4 |
+    g2 fis4 |
+    fis2 fis4 |
+    e e2 |
+    d2. |
+    R2.*2 |
+    r2 dis4 |
+    e2 e4 ~ |
+    e d c |
+    R2.*2 |
+    r2 g'4 |
+    a g fis |
+    g gis e |
+    fis2. |
+    e |
+    e2 d4 |
+    cis cis2 |
+    b2 r4 |
+    R2. |
+    R2. |
+    dis2 d4 |
+    cis2 c4 |
+    b4 cis8 d e fis |
+    e d cis dis e fis |
+    gis4 gis8 a b cis |
+    d4 fis,8 g a b |
+    c2 b4 |
+    a2 ~ a8 gis |
+    c,8 d e4 a ~ |
+    a8 c b a g f |
+    e2. |
+    d4 fis2 |
+    e4 r e ~ |
+    e8 e a g fis e |
+    d e16 fis g8 a b4 ~ |
+    b8 a16 gis a8 b cis4 ~ |
+    cis8 b16 ais b8 a g fis |
+    g4 fis2 |
+    fis r4 |
+    e'2. |
+    d2. ~ |
+    d4 r2 |
+    R2. |
+    r2 g,4 |
+    a g fis |
+    g2 e dis|
+    b\breve
   }
 }
 hnpre = {
   \relative f {
-    \transposition c'
     r4 g' fis fis, |
     g r8 b c4 c |
     b r r2 |
@@ -281,9 +275,9 @@ hnpre = {
 }
 hnfug = {
   \relative f {
-    \transposition c'
     R2.*7 |
-    \transposedCueDuring #"tptB" #DOWN c' { R2.*8 } |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuring #"tptB" #DOWN { R2.*8 } |
     e2. |
     fis |
     g2 gis4 |
@@ -340,7 +334,6 @@ hnfug = {
 }
 euphpre = {
   \relative f {
-    \transposition c'
     r4 g a b ~ |
     b r8 e, e4 a8 g |
     fis4 r8 g fis4 b ~ |
@@ -371,8 +364,8 @@ euphpre = {
 }
 euphfug = {
   \relative f {
-    \transposition c'
     R2.*15 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
     \transposedCueDuring #"hn" #UP c' { R2.*4 } |
     b,2. |
     cis |
@@ -431,8 +424,6 @@ euphfug = {
 }
 tubapre = {
   \relative f, {
-    \clef "bass"
-    \transposition c'
     e2 fis4 b, |
     e r8 g a2 |
     b1 |
@@ -463,10 +454,9 @@ tubapre = {
 }
 tubafug = {
   \relative f, {
-    \clef "bass"
-    \transposition c'
     R2.*15 |
-    \transposedCueDuring #"hn" #UP c { R2.*4 | } 
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
+    \transposedCueDuring #"hn" #UP c' { R2.*4 | } 
     b,2. |
     cis |
     d2 dis4 |
@@ -491,7 +481,9 @@ tubafug = {
     a g4 |
     c b2 |
     e2. |
-    R2.*8 |
+    R2.*4 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Euph." } }
+    \transposedCueDuring #"euph" #UP c' { R2.*4 | } 
     a,2. |
     b |
     c2 cis4 |

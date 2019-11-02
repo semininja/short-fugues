@@ -15,13 +15,15 @@
 \score { %Prelude
   \header { piece = "Prelude" }
   \new Score {
-    %\killCues
+    \killCues
+    \removeWithTag #'part
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = #"Trumpet 1"
         shortInstrumentName = #"Tpt. 1"
       } {
-        \transpose bes c'
+        \transposition bes
+        \new Voice \transpose bes c'
         <<
           \prelude
           \tptApre
@@ -31,7 +33,8 @@
         instrumentName = #"Trumpet 2"
         shortInstrumentName = #"Tpt. 2"
       } {
-        \transpose bes c'
+        \transposition bes
+        \new Voice \transpose bes c'
         <<
           \prelude
           \tptBpre
@@ -41,7 +44,8 @@
         instrumentName = #"F Horn"
         shortInstrumentName = #"Hn."
       } {
-        \transpose f c'
+        \transposition f
+        \new Voice \transpose f c'
         <<
           \prelude
           \hnpre
@@ -51,21 +55,27 @@
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
       } {
-        \clef "bass"
-        <<
-          \prelude
-          \euphpre
-        >>
+        \transposition c
+        \new Voice {
+          \clef "bass"
+          <<
+            \prelude
+            \euphpre
+          >>
+        }
       }
       \new Staff \with {
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
       } {
-        \clef "bass"
-        <<
-          \prelude
-          \tubapre
-        >>
+        \transposition c
+        \new Voice {
+          \clef "bass"
+          <<
+            \prelude
+            \tubapre
+          >>
+        }
       }
     >>
   }
@@ -73,13 +83,15 @@
 \score { %Fugue
   \header { piece = "Fugue" }
   \new Score {
-    %\killCues
+    \killCues
+    \removeWithTag #'part
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = #"Trumpet 1"
         shortInstrumentName = #"Tpt. 1"
       } {
-        \transpose bes c'
+        \transposition bes
+        \new Voice \transpose bes c'
         <<
           \fugue
           \tptAfug
@@ -89,7 +101,8 @@
         instrumentName = #"Trumpet 2"
         shortInstrumentName = #"Tpt. 2"
       } {
-        \transpose bes c'
+        \transposition bes
+        \new Voice \transpose bes c'
         <<
           \fugue
           \tptBfug
@@ -99,7 +112,8 @@
         instrumentName = #"F Horn"
         shortInstrumentName = #"Hn."
       } {
-        \transpose f c'
+        \transposition f
+        \new Voice \transpose f c'
         <<
           \fugue
           \hnfug
@@ -109,21 +123,27 @@
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
       } {
-        \clef "bass"
-        <<
-          \fugue
-          \euphfug
-        >>
+        \transposition c
+        \new Voice {
+          \clef "bass"
+          <<
+            \fugue
+            \euphfug
+          >>
+        }
       }
       \new Staff \with {
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
       } {
-        \clef "bass"
-        <<
-          \fugue
-          \tubafug
-        >>
+        \transposition c
+        \new Voice {
+          \clef "bass"
+          <<
+            \fugue
+            \tubafug
+          >>
+        }
       }
     >>
   }

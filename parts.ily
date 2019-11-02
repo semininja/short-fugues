@@ -19,21 +19,25 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
-      \transpose bes c' 
-      <<
-        \prelude
-        \tptApre
-      >>
+      \transposition bes
+      \new Voice \transpose bes c' {
+        <<
+          \prelude
+          \tptApre
+        >>
+      }
     }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
-      \transpose bes c' 
-      <<
-        \fugue
-        \tptAfug
-      >>
+      \transposition bes
+      \new Voice \transpose bes c' { 
+        <<
+          \fugue
+          \tptAfug
+        >>
+      }
     }
   }
 }
@@ -43,21 +47,25 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
-      \transpose bes c' 
-      <<
-        \prelude
-        \tptBpre
-      >>
+      \transposition bes
+      \new Voice \transpose bes c' { 
+        <<
+          \prelude
+          \tptBpre
+        >>
+      }
     }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
-      \transpose bes c' 
-      <<
-        \fugue
-        \tptBfug
-      >>
+      \transposition bes
+      \new Voice \transpose bes c' { 
+        <<
+          \fugue
+          \tptBfug
+        >>
+      }
     }
   }
 }
@@ -67,45 +75,25 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
-      \transpose f c' 
-      <<
-        \prelude
-        \hnpre
-      >>
+      \transposition f
+      \new Voice \transpose f c' { 
+        <<
+          \prelude
+          \hnpre
+        >>
+      }
     }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
-      \transpose f c' 
-      <<
-        \fugue
-        \hnfug
-      >>
-    }
-  }
-}
-\book {
-  \bookOutputSuffix "euph-high"
-  \header { instrument = "Euphonium 2" }
-  \score {
-    \header { piece = "Prelude" }
-    \new Staff {
-      \clef "bass"
-      <<
-        \prelude
-        \hnpre
-      >>
-    }
-  }
-  \score {
-    \header { piece = "Fugue" }
-    \new Staff {
-      \clef "bass"
-      <<
-        \fugue
-        \hnfug
-      >>
+      \transposition f
+      \new Voice \transpose f c' { 
+        <<
+          \fugue
+          \hnfug
+        >>
+      }
     }
   }
 }
@@ -116,22 +104,26 @@
     \header { piece = "Prelude" }
     \new Staff {
       \clef "treble"
-      \transpose bes c''
-      <<
-        \prelude
-        \euphpre
-      >>
+      \transposition bes,
+      \new Voice \transpose bes c' {
+        <<
+          \prelude
+          \euphpre
+        >>
+      }
     }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
       \clef "treble"
-      \transpose bes c''
-      <<
-        \fugue
-        \euphfug
-      >>
+      \transposition bes,
+      \new Voice \transpose bes c' {
+        <<
+          \fugue
+          \euphfug
+        >>
+      }
     }
   }
 }
@@ -141,21 +133,27 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
-      \clef "bass"
-      <<
-        \prelude
-        \euphpre
-      >>
+      \transposition c
+      \new Voice {
+        \clef "bass"
+        <<
+          \prelude
+          \euphpre
+        >>
+      }
     }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
-      \clef "bass"
-      <<
-        \fugue
-        \euphfug
-      >>
+      \transposition c
+      \new Voice {
+        \clef "bass"
+        <<
+          \fugue
+          \euphfug
+        >>
+      }
     }
   }
 }
@@ -165,21 +163,27 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
-      \clef "bass"
-      <<
-        \prelude
-        \tubapre
-      >>
+      \transposition c
+      \new Voice {
+        \clef "bass"
+        <<
+          \prelude
+          \tubapre
+        >>
+      }
     }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
-      \clef "bass"
-      <<
-        \fugue
-        \tubafug
-      >>
+      \transposition c
+      \new Voice {
+        \clef "bass"
+        <<
+          \fugue
+          \tubafug
+        >>
+      }
     }
   }
 }
