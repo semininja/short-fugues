@@ -16,11 +16,11 @@ prelude = {
   s4.
   \once \override Score.RehearsalMark.break-visibility = ##(#f #t #f)
   \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-  \bar "||" \mark "Fine"
+  \bar "|." \mark "Fine"
   s4.*30
   \once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
   \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-  \bar "|." \mark "D.C. al Fine"
+  \bar "||" \mark "D.C. al Fine"
 }
 
 fugue = {
@@ -28,7 +28,8 @@ fugue = {
   \time 4/4
   \tempo 4 = 80
   \partial 8*5 s8 s2 |
-  s1*28 \bar "|."
+  s1*27 |
+  s2 s2\fermata \bar "|."
 }
 
 tptApre = {
@@ -76,7 +77,30 @@ tptApre = {
 }
 tptAfug = {
   \relative f' {
-    s4.
+    \partial 8*5 r8 r2 |
+    R1*5
+    r4 r8 f g f g a |
+    \repeat unfold 4 { bes16 c } \repeat unfold 4 { a bes } |
+    g8 a16 bes c8 bes a f c'4 ~ |
+    c bes a2 |
+    g f |
+    e4 r r2 R1 |
+    r4 r8 c' d c d e |
+    \repeat unfold 4 { f16 g } \repeat unfold 4 { e f } |
+    d8 e16 f g8 f e4 r8 e |
+    4. g8 c,4. d8 |
+    ees4 r8 c d c d e |
+    f e f2 ees4 |
+    d2 c |
+    bes \repeat unfold 4 { a16 bes } |
+    \repeat unfold 4 { g a } \repeat unfold 4 { a bes } |
+    g4 r8 c c4 bes |
+    a4. b8 c4 r8 c |
+    c4 r8 bes bes4 r8 a |
+    g4 r8 c d c d e |
+    \repeat unfold 4 { f16 g } ees4 r8 ees |
+    d c bes a g4 a |
+    g2 f |
   }
 }
 tptBpre = {
@@ -123,7 +147,32 @@ tptBpre = {
 }
 tptBfug = {
   \relative f' {
-    s4.
+    \partial 8*5 r8 r2 |
+    R1 |
+    r2 r4 r8 c |
+    d c d e \repeat unfold 4 { f16 g } |
+    \repeat unfold 4 { e f } d8 e16 f g8 f |
+    e c f2 e4\trill |
+    f r r2 |
+    R1*4 |
+    r4 e2 ees8 c |
+    d4 g ~ g16 a g a f g f g |
+    e4. e8 f e f g |
+    a a b b g g g g |
+    g4. d'8 ~ d c16 b c4 ~ |
+    c bes ~ bes8 a16 g a8 f |
+    g f g a bes a bes g |
+    a g a c bes4. f8 |
+    f4 g2 f4 ~ |
+    f8 g16 f e8.\trill f16 f8 f f f |
+    e e e e f f f f |
+    e4 r8 e f4. c8 |
+    c4 d g r8 g |
+    f4 r8 f g4 r8 f ~ |
+    f e16 d e8 f f e f g |
+    a a a a bes4 r8 f |
+    f4 g8 f e4 f ~ |
+    f e c2 |
   }
 }
 hnpre = {
@@ -168,7 +217,28 @@ hnpre = {
 }
 hnfug = {
   \relative f {
-    s4.
+    \partial 8*5 r8 r2 |
+    R1*5 |
+    f'4 a, g2 |
+    f4 g e f |
+    g2 f4 r8 g' |
+    f4. c8 c4 d ~ |
+    d c ~ c8 d16 c b4\trill |
+    c r8 f,8 g f g a |
+    \repeat unfold 4 { bes16 c } a4 d ~ |
+    d8 c16 b c4 bes4. bes8 |
+    c4 d g, c ~ |
+    c b c r8 c |
+    d c d e f4 r8 d |
+    c4 r8 f, bes4 r8 c |
+    f4 r r2 |
+    R1*4 |
+    r2 r4 r8 c |
+    d4 r8 d e4 r8 c |
+    c4 r8 c bes4. bes8 |
+    c4 r8 c bes a bes c |
+    d4 r c c |
+    c4. bes8 a2 |
   }
 }
 euphpre = {
@@ -204,7 +274,30 @@ euphpre = {
 }
 euphfug = {
   \relative f {
-    s4.
+    \partial 8*5 f8 g f g a |
+    \repeat unfold 4 { bes16 c } \repeat unfold 4 { a bes } |
+    g8 a16 bes c8 bes a g a f |
+    bes a bes g a4 d |
+    g, c2 b4 |
+    bes  a8 f g a16 bes c8 bes |
+    a g f2 ees4 |
+    d g c, f ~ |
+    f e f r8 e |
+    f e f g a4 d |
+    g,2 a4 g |
+    g4. r8 r2 |
+    R1*6 |
+    r4 r8 a bes a bes c |
+    bes2 c |
+    d4 c c r |
+    c r c r |
+    c r8 g f e f g |
+    f4 d' c r4 |
+    R1 |
+    r4 r8 a bes4. bes8 |
+    a4 r8 a g f g a |
+    bes4 r bes a8 bes |
+    a4 g f2 |
   }
 }
 tubapre = {
@@ -235,7 +328,28 @@ tubapre = {
 }
 tubafug = {
   \relative f, {
-    s4.
+    \partial 8*5 r8 r2 |
+    R1*7 |
+    r2 r4 r8 c |
+    d c d e \repeat unfold 4 { f16 g } |
+    \repeat unfold 4 { e f } d4 g |
+    c,1 |
+    g'2 d |
+    a' ~ a4. g8 |
+    f4 d e c |
+    g'2 c,4 r |
+    R1*2 |
+    r4 r8 f g f g a |
+    \repeat unfold 4 { bes16 c } \repeat unfold 4 { a bes }
+    g4 c, f r |
+    c r f r |
+    c r8 c d c d e |
+    \repeat unfold 4 { f16 g } \repeat unfold 4 { e f } |
+    \repeat unfold 4 { d e } \repeat unfold 4 { c d } |
+    c4 r8 a bes4. bes8 |
+    a4 r8 a g f g a |
+    bes2. a8 bes |
+    c2 f, |
   }
 }
 
