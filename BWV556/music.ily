@@ -163,7 +163,7 @@ tptBfug = {
     e4. e8 f e f g |
     a a b b g g g g |
     g4. d'8 ~ d c16 b c4 ~ |
-    c bes ~ bes8 a16 g a8 f |
+    c bes ~ bes8 a16 g a8 f\noBeam |
     g f g a bes a bes g |
     a g a c bes4. f8 |
     f4 g2 f4 ~ |
