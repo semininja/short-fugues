@@ -15,8 +15,8 @@
 \score { %Prelude
   \header { piece = "Prelude" }
   \new Score {
-    \killCues
-    \removeWithTag #'part
+    %\killCues
+    %\removeWithTag #'part
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = #"Trumpet 1"
@@ -55,7 +55,6 @@
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
       } {
-        \transposition c
         \new Voice {
           \clef "bass"
           <<
@@ -68,7 +67,6 @@
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
       } {
-        \transposition c
         \new Voice {
           \clef "bass"
           <<
@@ -83,8 +81,8 @@
 \score { %Fugue
   \header { piece = "Fugue" }
   \new Score {
-    \killCues
-    \removeWithTag #'part
+    %\killCues
+    %\removeWithTag #'part
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = #"Trumpet 1"
@@ -123,7 +121,6 @@
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
       } {
-        \transposition c
         \new Voice {
           \clef "bass"
           <<
@@ -136,7 +133,6 @@
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
       } {
-        \transposition c
         \new Voice {
           \clef "bass"
           <<
