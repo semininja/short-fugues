@@ -58,7 +58,7 @@ tptApre = {
     fis d d'4 c4. d8
     b2 ~ b8 a c4 ~ |
     c8 a b c a2 |
-    g8 a b4. cis8 d4 ~ |
+    g8 a b4 ~ b8 cis8 d4 ~ |
     d8 d cis4 |
     d4 r r r8 d |
     e2 d |
