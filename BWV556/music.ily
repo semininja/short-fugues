@@ -200,8 +200,10 @@ hnpre = {
     fis,[ a d] fis,[ a d] fis,[ a d] |
     g,[ bes d] g,[ bes d] g,[ bes d] | }
     d,4. |
-    R4.*5 |
-    r8 r16 d'16 c bes |
+    R4.*4 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuring #"tptBp" #UP { R4. |
+    r8 } r16 d'16 c bes |
     \tuplet 3/2 8 { a16[ c f] a,[ c f] a,[ c f] |
     g,[ bes e] g,[ bes e] g,[ bes e] |
     a,[ c f] a,[ c f] a,[ c f] | }
@@ -237,8 +239,10 @@ hnfug = {
     d c d e f4 r8 d |
     c4 r8 f, bes4 r8 c |
     f4 r r2 |
-    R1*4 |
-    r2 r4 r8 c |
+    R1*3 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Euph" } }
+    \cueDuring "euphf" #DOWN { R1 |
+    r2 r4 } r8 c |
     d4 r8 d e4 r8 c |
     c4 r8 c bes4. bes8 |
     c4 r8 c bes a bes c |
@@ -248,7 +252,11 @@ hnfug = {
 }
 euphpre = {
   \relative f {
-    R4.*11 |
+    R4.*9 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuringWithClef #"tptBp" #UP #"treble" { R4. }
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 1" } }
+    \cueDuringWithClef #"tptAp" #UP #"treble" { R4. }
     bes4 a8 |
     bes c4 |
     f,4. |
@@ -291,8 +299,11 @@ euphfug = {
     f e f g a4 d |
     g,2 a4 g |
     g4. r8 r2 |
-    R1*6 |
-    r4 r8 a bes a bes c |
+    R1*3 |
+    r2 r4 r8 \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
+    \cueDuring #"hnf" #UP { r |
+    R1*2 |
+    r4 } r8 a bes a bes c |
     bes2 c |
     d4 c c r |
     c r c r |
@@ -318,7 +329,9 @@ tubapre = {
     bes4 a8 |
     bes c4 |
     f,4. |
-    R4.*20 |
+    R4.*17 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
+    \cueDuring #"hnp" #UP { R4.*3 } |
     c4 r8 |
     f,4 r8 |
     d'4 r8 |
