@@ -45,7 +45,7 @@ tptApre = {
     R4.
     \tuplet 3/2 8 { bes16[ d g] bes,[ d g] bes,[ d g] | }
     e c d e f8 ~ |
-    f16 bes, g8.\trill f16 |
+    f16 bes, g8.[\trill f16] |
     f4. |
     r8 c'4 ~ |
     c8 c4 ~ |
@@ -78,8 +78,10 @@ tptApre = {
 tptAfug = {
   \relative f' {
     \partial 8*5 r8 r2 |
-    R1*5
-    r4 r8 f g f g a |
+    R1*4 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuring "tptBf" #DOWN { R1 |
+    r4 } r8 f g f g a |
     \repeat unfold 4 { bes16 c } \repeat unfold 4 { a bes } |
     g8 a16 bes c8 bes a f c'4 ~ |
     c bes a2 |
@@ -105,11 +107,11 @@ tptAfug = {
 }
 tptBpre = {
   \relative f' {
-    \cueDuring #"tptAp" #UP { R4. | }
+    R4. |
     a8 a a |
     a bes16 a g f |
     e4. |
-    \cueDuring #"tptAp" #UP { R4.*2 | }
+    R4.*2 |
     \tuplet 3/2 8 { g16[ b d] g,[ b d] g,[ b d] |
     g,[ c e] g,[ c e] g,[ c e] | }
     R4. |
@@ -147,9 +149,10 @@ tptBpre = {
 }
 tptBfug = {
   \relative f' {
-    \partial 8*5 r8 r2 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Euph" } }
+    \cueDuring "euphf" #DOWN { \partial 8*5 r8 r2 |
     R1 |
-    r2 r4 r8 c |
+    r2 r4 r8 } c |
     d c d e \repeat unfold 4 { f16 g } |
     \repeat unfold 4 { e f } d8 e16 f g8 f |
     e c f2 e4\trill |
@@ -177,7 +180,7 @@ tptBfug = {
 }
 hnpre = {
   \relative f {
-    \cueDuring #"tptAp" #UP { R4. | }
+    R4. |
     f16 e f g a bes |
     c8 c c |
     c16 d c bes a g |
@@ -218,7 +221,9 @@ hnpre = {
 hnfug = {
   \relative f {
     \partial 8*5 r8 r2 |
-    R1*5 |
+    R1*4 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuring "tptBf" #UP { R1 } |
     f'4 a, g2 |
     f4 g e f |
     g2 f4 r8 g' |
@@ -250,9 +255,9 @@ euphpre = {
     \tuplet 3/2 8 { f16[ a c] f,[ a c] f,[ a c] |
     e,[ g c] e,[ g c] e,[ g c] |
     f,[ a c] f,[ a c] f,[ a c] | }
-    c4. |
+    c,4. |
     R4.*3 |
-    r8 r16 ees,16 d c |
+    r8 r16 ees16 d c |
     \tuplet 3/2 8 { bes[ d g] bes,[ d g] bes,[ d g] |
     a,[ c ees] a,[ c ees] a,[ c ees] |
     bes[ d g] bes,[ d g] bes,[ d g] | }
@@ -302,7 +307,7 @@ euphfug = {
 }
 tubapre = {
   \relative f, {
-    \cueDuringWithClef #"tptAp" #DOWN #"treble" { R4.*4 | }
+    \cueDuringWithClef #"tptAp" #UP #"treble" { R4.*4 | }
     f4 r8 |
     bes4 r8 |
     g4 r8 |
@@ -329,8 +334,11 @@ tubapre = {
 tubafug = {
   \relative f, {
     \partial 8*5 r8 r2 |
-    R1*7 |
-    r2 r4 r8 c |
+    R1*5 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 1" } }
+    \cueDuringWithClef "tptAf" #UP "treble" { R1 |
+    R1 |
+    r2 } r4 r8 c |
     d c d e \repeat unfold 4 { f16 g } |
     \repeat unfold 4 { e f } d4 g |
     c,1 |
