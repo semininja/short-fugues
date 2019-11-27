@@ -133,7 +133,6 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
-      \transposition c
       \new Voice {
         \clef "bass"
         <<
@@ -146,7 +145,6 @@
   \score {
     \header { piece = "Fugue" }
     \new Staff {
-      \transposition c
       \new Voice {
         \clef "bass"
         <<
@@ -163,7 +161,6 @@
   \score {
     \header { piece = "Prelude" }
     \new Staff {
-      \transposition c
       \new Voice {
         \clef "bass"
         <<
@@ -176,7 +173,6 @@
   \score {
     \header { piece = "Fugue" }
     \new Staff {
-      \transposition c
       \new Voice {
         \clef "bass"
         <<
