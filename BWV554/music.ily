@@ -325,7 +325,7 @@ tubafug = {
     \partial 8*5 r8 r2 |
     R1*4 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Euph" } }
-    \transposedCueDuring "euph" #UP c' { R1*2 }
+    \cueDuring "euph" #UP { R1*2 }
     r2 r4 r8 d |
     c e b e a, c f4 |
     e8 fis16 gis a4 ~ a8 gis16 fis e8 d |

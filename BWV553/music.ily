@@ -151,6 +151,7 @@ tptBpre = {
 }
 tptBfug = {
   \relative f' {
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 1" } }
     \cueDuring #"tptA" #UP { r8 r4 |
     R1 |
     r2 r8 } g g g |
@@ -169,8 +170,9 @@ tptBfug = {
     e r fis8 fis e4 |
     d r e8 e d e |
     fis fis e fis gis gis r b |
-    e,4 e e r |
-    r8 a a a b4 r8 a |
+    e,4 e \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } } 
+    \cueDuring #"hn" #DOWN { e r |
+    r8 a a a b4 r8 a } |
     g e16 f g a g f e8 e[ e e] |
     e4 r8 e a a a g16 a |
     g4 r8 d g g g f16 g |
@@ -225,12 +227,13 @@ hnfug = {
     \cueDuring #"tptB" #UP { R1*4 }
     r8 c' c c e4 r8 d |
     c c c b16 c d4 r8 c |
-    b b b b c16 d c d e4 ~ |
+    b b[ b b] c16 d c d e4 ~ |
     e8 r8 r4 r2 |
     r8 g, c b16 c a b a b c4 |
     R1 |
     r2 r8 d d d |
-    e4 r8 d c c c b16 c |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Euph" } }
+    \cueDuring #"euphf" #DOWN { e4 r8 d c c } c b16 c |
     d4 r8 c b b b a16 b |
     c8 g c4 ~ c8 d16 c \afterGrace b4\trill { a8 b } |
     c4 r4 r2 |
@@ -288,12 +291,13 @@ euphfug = {
     \partial 4. r8 r4 |
     R1*5 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
-    \cueDuringWithClef #"hn" #UP "treble" { R1*3 }
+    \cueDuring #"hn" #UP { R1*3 }
     r8 a d c16 d b c b c d4 ~ |
     d8 r r4 r2 |
     b16 c b c d4 c16 d c8 b c16 b |
-    a2 b4 r |
-    r8 g g g a4 r8 g |
+    a2 \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
+    \cueDuring #"hn" #UP { b4 r |
+    r8 g g g a4 r8 g } |
     f f f e16 f g4 r8 f |
     e e e d16 e d4 g8 f |
     e8 c'[ c c] g16 a g a b4 ~ |
@@ -323,7 +327,8 @@ tubapre = {
       d1 ~ |
       d4 r r2
       r4 r8 g fis g d4 |
-      g, r r16 g' f? g e g d g |
+      \tag #'part { \new CueVoice { \set instrumentCueName = "Euph." } }
+      \cueDuring #"euphp" #UP { g, r r16 g' f? g } e g d g |
     }
     \repeat volta 2 {
       \mark \default c,4 r f r |
@@ -353,8 +358,8 @@ tubafug = {
     r8 r4 |
     R1*5 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
-    \cueDuringWithClef #"hn" #UP #"treble" { R1*2 }
-    r8 g g g a4 r8 g |
+    \cueDuring #"hn" #UP { R1*2 |
+    r8 } g g g a4 r8 g |
     f f f e16 f g4 r8 f |
     e e e d16 e f4 e8 f |
     g4 f8 g a4 g |
@@ -383,7 +388,10 @@ tubafug = {
 \addQuote "hn" {
   \hnfug
 }
-\addQuote "euph" {
+\addQuote "euphp" {
+  \euphpre
+}
+\addQuote "euphf" {
   \euphfug
 }
 \addQuote "tuba" {

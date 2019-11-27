@@ -366,7 +366,7 @@ euphfug = {
   \relative f {
     R2.*15 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
-    \transposedCueDuring #"hn" #UP c' { R2.*4 } |
+    \cueDuring #"hn" #UP { R2.*4 } |
     b,2. |
     cis |
     d2 dis4 |
@@ -456,7 +456,7 @@ tubafug = {
   \relative f, {
     R2.*15 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
-    \transposedCueDuring #"hn" #UP c' { R2.*4 | } 
+    \cueDuring #"hn" #UP { R2.*4 | } 
     b,2. |
     cis |
     d2 dis4 |
@@ -481,9 +481,9 @@ tubafug = {
     a g4 |
     c b2 |
     e2. |
-    R2.*4 |
+    R2.*6 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Euph." } }
-    \transposedCueDuring #"euph" #UP c' { R2.*4 | } 
+    \cueDuring #"euph" #UP { R2.*2 | } 
     a,2. |
     b |
     c2 cis4 |
