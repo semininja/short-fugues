@@ -1,5 +1,5 @@
 %BWV 556
-\version "2.19.82"
+\version "2.22.1"
 
 \bookOutputName "BWV556"
 
@@ -48,12 +48,12 @@ tptApre = {
     f16 bes, g8.[\trill f16] |
     f4. |
     r8 c'4 ~ |
-    c8 c4 ~ |
-    c8 c4 |
+    c8 4 ~ |
+    8 4 |
     g16 f g4 |
     r8 d'4 ~ |
-    d8 d4 ~ |
-    d8 d4 |
+    d8 4 ~ |
+    8 4 |
     a16 g a4 |
     \tuplet 3/2 8 { d,16[ g bes] d,[ g bes] d,[ g bes] |
     fis[ a c] fis,[ a c] fis,[ a c] | }
@@ -72,7 +72,7 @@ tptApre = {
     \tuplet 3/2 8 { fis16[ a b] fis[ a b] fis[ a b] | }
     gis e fis gis a b |
     c d b8.[\trill a16] |
-    a4. |
+    4. |
   }
 }
 tptAfug = {
@@ -86,7 +86,8 @@ tptAfug = {
     g8 a16 bes c8 bes a f c'4 ~ |
     c bes a2 |
     g f |
-    e4 r r2 R1 |
+    e4 r r2 |
+    R1 |
     r4 r8 c' d c d e |
     \repeat unfold 4 { f16 g } \repeat unfold 4 { e f } |
     d8 e16 f g8 f e4 r8 e |
@@ -98,7 +99,7 @@ tptAfug = {
     \repeat unfold 4 { g a } \repeat unfold 4 { a bes } |
     g4 r8 c c4 bes |
     a4. b8 c4 r8 c |
-    c4 r8 bes bes4 r8 a |
+    c4 r8 bes 4 r8 a |
     g4 r8 c d c d e |
     \repeat unfold 4 { f16 g } ees4 r8 ees |
     d c bes a g4 a |
@@ -118,15 +119,15 @@ tptBpre = {
     \tuplet 3/2 8 { a,16[ d f] a,[ d f] a,[ d f] | }
     R4.
     g,4 f8 |
-    f4 e8 |
+    4 e8 |
     c4. |
     a'4 a8 |
-    g4 g8 |
-    a4 a8 |
+    g4 8 |
+    a4 8 |
     e16 d e4 |
     bes'4 bes8 |
-    a4 a8 |
-    bes4 bes8 |
+    a4 8 |
+    bes4 8 |
     fis16 e fis4 |
     R4.*2 |
     \tuplet 3/2 8 { d16[ g bes] d,[ g bes] d,[ g bes] |
@@ -163,14 +164,14 @@ tptBfug = {
     e4. e8 f e f g |
     a a b b g g g g |
     g4. d'8 ~ d c16 b c4 ~ |
-    c bes ~ bes8 a16 g a8 f\noBeam |
+    c bes ~ 8 a16 g a8 f\noBeam |
     g f g a bes a bes g |
     a g a c bes4. f8 |
-    f4 g2 f4 ~ |
-    f8 g16 f e8.\trill f16 f8 f f f |
+    4 g2 f4 ~ |
+    8 g16 f e8.\trill f16 8 f f f |
     e e e e f f f f |
     e4 r8 e f4. c8 |
-    c4 d g r8 g |
+    4 d g r8 g |
     f4 r8 f g4 r8 f ~ |
     f e16 d e8 f f e f g |
     a a a a bes4 r8 f |
@@ -191,7 +192,7 @@ hnpre = {
     a cis a |
     d f d |
     bes d bes |
-    c4 c8 |
+    c4 8 |
     d c4 |
     a4. |
     R4.*3 |
@@ -229,7 +230,7 @@ hnfug = {
     f'4 a, g2 |
     f4 g e f |
     g2 f4 r8 g' |
-    f4. c8 c4 d ~ |
+    f4. c8 4 d ~ |
     d c ~ c8 d16 c b4\trill |
     c r8 f,8 g f g a |
     \repeat unfold 4 { bes16 c } a4 d ~ |
@@ -280,8 +281,8 @@ euphpre = {
     d fis d |
     R4.*3
     fis4. |
-    e4 e8 ~ |
-    e4 e8 |
+    e4 8 ~ |
+    e4 8 |
     e4. |
   }
 }
