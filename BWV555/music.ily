@@ -1,5 +1,5 @@
 %BWV 555
-\version "2.19.80"
+\version "2.22.1"
 
 \bookOutputName "BWV555"
 
@@ -51,14 +51,14 @@ tptApre = {
   \relative f' {
     r4 b a4. b8 |
     g4. g8 ~ g g fis e |
-    dis b b'4 a4. b8|
+    dis b b'4 a4. b8 |
     g a b2 a4 |
     b4. a8 gis4 r |
     c,8 e a g |
     fis d d'4 c4. d8
-    b2 ~ b8 a c4 ~ |
+    b2 ~ 8 a c4 ~ |
     c8 a b c a2 |
-    g8 a b4 ~ b8 cis8 d4 ~ |
+    g8 a b4 ~ 8 cis8 d4 ~ |
     d8 d cis4 |
     d4 r r r8 d |
     e2 d |
@@ -99,7 +99,7 @@ tptAfug = {
     cis|
     d4 cis b ~ |
     b cis8 b ais4 |
-    b2 b4 |
+    b2 4 |
     b2 cis4 |
     cis2 d4 |
     cis2. |
@@ -123,7 +123,7 @@ tptAfug = {
     dis4.\trill cis16 dis e4 ~ |
     e e4.\trill dis8
     e2. |
-    R2.*2|
+    R2.*2 |
     b'2. |
     a |
     gis4 r2 |
@@ -151,9 +151,9 @@ tptAfug = {
 }
 tptBpre = {
   \relative f' {
-    r4 e4 ~ e8 e dis4 |
+    r4 e4 ~ 8 e dis4 |
     r8 b e e e4 c |
-    b4 e ~ e8 e dis4 |
+    b4 e ~ 8 e dis4 |
     e fis e2 ~ |
     e4 dis r8 d c b |
     a4 e' |
@@ -173,7 +173,7 @@ tptBpre = {
     b a2 g4 ~ |
     g4 r r2 |
     r r8 a g fis |
-    e2 ~ e4 r |
+    e2 ~ 4 r |
     b b b2 |
     b1 |
   }
@@ -200,12 +200,12 @@ tptBfug = {
     gis |
     ais2 fis4 |
     g2 fis4 |
-    fis2 fis4 |
+    2 4 |
     e e2 |
     d2. |
     R2.*2 |
     r2 dis4 |
-    e2 e4 ~ |
+    e2 4 ~ |
     e d c |
     R2.*2 |
     r2 g'4 |
@@ -222,10 +222,10 @@ tptBfug = {
     cis2 c4 |
     b4 cis8 d e fis |
     e d cis dis e fis |
-    gis4 gis8 a b cis |
+    gis4 8 a b cis |
     d4 fis,8 g a b |
     c2 b4 |
-    a2 ~ a8 gis |
+    a2 ~ 8 gis |
     c,8 d e4 a ~ |
     a8 c b a g f |
     e2. |
@@ -256,12 +256,12 @@ hnpre = {
     R2 |
     R1 |
     r8 d g fis e4 r8 e |
-    fis4 d ~ d4. c8 |
+    fis4 d ~ 4. c8 |
     b c d4 g4. fis8 |
     e4. g8 |
     fis r8 r4 r2 |
     R1*3 |
-    d8 e fis4 fis2 ~ |
+    d8 e fis4 2 ~ |
     fis4 e2 d4 ~ |
     d c2 b4 ~ |
     b b' a2 |
@@ -288,7 +288,7 @@ hnfug = {
     gis4 e'8 d cis b |
     ais2 b4 ~ |
     b2 ais4 |
-    b2 ~ b8 a |
+    b2 ~ 8 a |
     g4 fis2 |
     fis2. |
     g |
@@ -352,7 +352,7 @@ euphpre = {
     fis b cis2 |
     d4 b a2 |
     g fis |
-    g8 b e d c a d c|
+    g8 b e d c a d c |
     b g c b a fis b a |
     g e a g fis d g d |
     e4 e fis fis |
@@ -383,7 +383,7 @@ euphfug = {
     a2. |
     b |
     cis |
-    b2 b4 |
+    b2 4 |
     c b a |
     b2 a4 |
     a dis,8 e fis g |
@@ -398,7 +398,7 @@ euphfug = {
     g fis e d cis b |
     cis b a b cis dis |
     e4 e, e' |
-    b8 cis d4  d, |
+    b8 cis d4 d, |
     a'8 b c d e d |
     c a d b e e, |
     a2. |
@@ -410,15 +410,15 @@ euphfug = {
     g2 gis4 |
     a2 ais4 |
     b2. ~ |
-    b4 ais2 |
+    4 ais2 |
     fis2 r4 |
     r8 b c b a g |
     a4. e'8 d c |
     b2. |
     cis |
-    b2 b4 |
+    b2 4 |
     c b a |
-    b2 b2. a4 |
+    b2 2. a4 |
     g\breve
   }
 }
@@ -430,7 +430,7 @@ tubapre = {
     e,4 d c2 |
     b e |
     a,4 c |
-    d2. d4 |
+    d2. 4 |
     g, b c r8 a 
     d4 g, d'2 |
     g,4 g'8 fis e4 d |
@@ -477,7 +477,7 @@ tubafug = {
     dis2 d4 |
     cis2 c4 |
     b2. ~ |
-    b4 ais2 |
+    4 ais2 |
     a g4 |
     c b2 |
     e2. |

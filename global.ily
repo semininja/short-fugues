@@ -1,4 +1,4 @@
-\version "2.19.80"
+\version "2.22.1"
 
 \header {
   composer = "J. S. Bach"
@@ -27,7 +27,7 @@
   \context {
     \Score
     markFormatter = #format-mark-box-barnumbers
-    \compressFullBarRests
+    \compressEmptyMeasures
   }
   
   \context {

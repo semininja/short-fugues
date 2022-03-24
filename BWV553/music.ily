@@ -1,5 +1,5 @@
 %BWV 553
-\version "2.19.80"
+\version "2.22.1"
 
 \bookOutputName "BWV553"
 
@@ -45,7 +45,7 @@ fugue = {
 tptApre = {
   \relative f' {
     \repeat volta 2 {
-      r16 c' b c g c b c e,4 r4 |
+      r16 c' b c g c b c e,4 r |
       r16 c' b c g c b c a8 r r4 |
       d,16 d' c d a d c d b8 r r4 |
       e,16 e' d e b e d e c8 r r4 |
@@ -56,7 +56,7 @@ tptApre = {
       g16 fis g d a' g a d, b' a b d, c' b c d, |
       d'4. d8 e16 g d g c, g' b, g' |
       a,4 r8 b c16 d b c a8.\trill g16 |
-      g4 r r2 |
+      g4r r2 |
     }
     \repeat volta 2 { 
       \mark \default r16 c b c g c b c a4 r |
@@ -72,7 +72,7 @@ tptApre = {
       a8 r r4 r16 d c d a d c d |
       b8 r r4 r16 e d e b e d e |
       r2 r16 g f g d g f g |
-      e g e g f a f a r2|
+      e g e g f a f a r2 |
       c,16 e c e d f d f b, g a b c4 ~ |
     }
     \alternative {
@@ -86,20 +86,20 @@ tptAfug = {
     c'8 c c |
     e4 r8 d c c c b16 c |
     d4 r8 c b b b a16 b |
-    c d c d e4 ~ e8 a, d c16 d |
-    b c b c d4 ~ d8 g, c b16 c |
+    c d c d e4 ~ 8 a, d c16 d |
+    b c b c d4 ~ 8 g, c b16 c |
     a b a b c4 ~ c \afterGrace b\trill { a8 b } |
     c8 e16 d c e d c b c b c d4 |
     e2 a,16 b a b c4 |
-    d2 c4 ~ c8 bes |
-    a4 a b ~ b8 a |
+    d2 c4 ~ 8 bes |
+    a4 a b ~ 8 a |
     g4 g a r |
     r2 r4 g ~ |
     g8 a16 g fis8.\trill g16 g4 r |
     R1*3 | 
     c8 e16 d c e d c b c b c d4 |
-    e4 ~ e8 d16 e a, b a b c4 |
-    d ~ d8 c16 d g, a g a b4 |
+    e4 ~ 8 d16 e a, b a b c4 |
+    d ~ 8 c16 d g, a g a b4 |
     a16 b a b c4 b16 c b c d e d e |
     c8 d b8.\trill a16 a4 r |
     R1 |
@@ -115,14 +115,14 @@ tptBpre = {
     \repeat volta 2 {
       R1 |
       r2 a16 f e f c f e f |
-      d8 r r4 b'16 g fis g d g fis g |
-      e8 r r4 c'16 a gis a e a gis a |
+      d8 r r4b'16 g fis g d g fis g |
+      e8 r r4c'16 a gis a e a gis a |
       r16 fis e fis r fis e fis r g fis g r g fis g |
       r e d e r e d e r fis e fis r fis e fis |
       r d c d r d c d r e d e r e d e |
       r cis b cis r cis b cis r d cis d r d cis d |
       g8 r r4 r2 |
-      r16 fis g a b8 g ~ g2 ~ |
+      r16 fis g a b8 g ~ 2 ~ |
       g8 fis16 e fis8 g a g fis d |
       d4 r r2 |
     }
@@ -176,7 +176,7 @@ tptBfug = {
     g e16 f g a g f e8 e[ e e] |
     e4 r8 e a a a g16 a |
     g4 r8 d g g g f16 g |
-    f4 g g4. f8|
+    f4 g g4. f8 |
     e1 |
   }
 }
@@ -193,7 +193,7 @@ hnpre = {
       a a a a a a a a |
       b4 fis g a |
       b16 d e fis g8 b, c b a g |
-      d'4 r8 d d d d4 |
+      d'4 r8 d d d  d4 |
       b r r2 |
     }
     \repeat volta 2 { 
@@ -235,7 +235,7 @@ hnfug = {
     \tag #'part { \new CueVoice { \set instrumentCueName = "Euph" } }
     \cueDuring #"euphf" #DOWN { e4 r8 d c c } c b16 c |
     d4 r8 c b b b a16 b |
-    c8 g c4 ~ c8 d16 c \afterGrace b4\trill { a8 b } |
+    c8 g c4 ~ 8 d16 c \afterGrace b4\trill { a8 b } |
     c4 r4 r2 |
     R1*3 |
     r2 c8 e[ e e] |

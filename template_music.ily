@@ -1,5 +1,5 @@
 %BWV 55x
-\version "2.19.82"
+\version "2.22.1"
 
 \bookOutputName "BWV55x"
 
