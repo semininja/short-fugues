@@ -99,7 +99,7 @@ tptAfug = {
     \repeat unfold 4 { g a } \repeat unfold 4 { a bes } |
     g4 r8 c c4 bes |
     a4. b8 c4 r8 c |
-    c4 r8 bes 4 r8 a |
+    c4 r8 bes bes4 r8 a |
     g4 r8 c d c d e |
     \repeat unfold 4 { f16 g } ees4 r8 ees |
     d c bes a g4 a |

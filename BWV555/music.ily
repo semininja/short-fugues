@@ -60,10 +60,10 @@ tptApre = {
     c8 a b c a2 |
     g8 a b4 ~ 8 cis8 d4 ~ |
     d8 d cis4 |
-    d4 r r 8 d |
+    d4 r r r8 d |
     e2 d |
     c b4. cis8 |
-    ais4 r8 b ~ b 4 ais8 |
+    ais4 r8 b ~ b b4 ais8 |
     b cis d e fis cis fis e |
     d b e d c? a d c |
     b g c b a fis b a |
@@ -119,9 +119,9 @@ tptAfug = {
     b2. |
     a |
     g2 fis4 |
-    e 4.\trill dis16 e |
+    e e4.\trill dis16 e |
     dis4.\trill cis16 dis e4 ~ |
-    e 4.\trill dis8
+    e e4.\trill dis8
     e2. |
     R2.*2 |
     b'2. |
@@ -152,13 +152,13 @@ tptAfug = {
 tptBpre = {
   \relative f' {
     r4 e4 ~ 8 e dis4 |
-    r8 b e e 4 c |
+    r8 b e e e4 c |
     b4 e ~ 8 e dis4 |
     e fis e2 ~ |
     e4 dis r8 d c b |
     a4 e' |
     d g4. g8 fis4 |
-    b, r 2 |
+    b, r r2 |
     R1 |
     R1 |
     R2 |
@@ -166,15 +166,15 @@ tptBpre = {
     b8 b a g fis d g fis |
     e c fis e dis b e4 ~ |
     e8 e d4 cis cis |
-    d8 r8 4 r2 |
+    d8 r8 r4 r2 |
     R1*2 |
     e4 e'2 d4 ~ |
     d c2 b4 ~ |
     b a2 g4 ~ |
-    g4 r 2 |
-    r 8 a g fis |
+    g4 r r2 |
+    r r8 a g fis |
     e2 ~ 4 r |
-    b b 2 |
+    b b b2 |
     b1 |
   }
 }
@@ -200,8 +200,8 @@ tptBfug = {
     gis |
     ais2 fis4 |
     g2 fis4 |
-    fisis2 4 |
-    e 2 |
+    2 4 |
+    e e2 |
     d2. |
     R2.*2 |
     r2 dis4 |
@@ -214,7 +214,7 @@ tptBfug = {
     fis2. |
     e |
     e2 d4 |
-    cisis 2 |
+    cis cis2 |
     b2 r4 |
     R2. |
     R2. |
@@ -222,7 +222,7 @@ tptBfug = {
     cis2 c4 |
     b4 cis8 d e fis |
     e d cis dis e fis |
-    gisis4 8 a b cis |
+    gis4 8 a b cis |
     d4 fis,8 g a b |
     c2 b4 |
     a2 ~ 8 gis |
@@ -251,7 +251,7 @@ hnpre = {
   \relative f {
     r4 g' fis fis, |
     g r8 b c4 c |
-    b r 2 |
+    b r r2 |
     R1*2 |
     R2 |
     R1 |
@@ -259,9 +259,9 @@ hnpre = {
     fis4 d ~ 4. c8 |
     b c d4 g4. fis8 |
     e4. g8 |
-    fis r8 4 r2 |
+    fis r8 r4 r2 |
     R1*3 |
-    d8 e fisis4 2 ~ |
+    d8 e fis4 2 ~ |
     fis4 e2 d4 ~ |
     d c2 b4 ~ |
     b b' a2 |
@@ -343,16 +343,16 @@ euphpre = {
     a4 r8 b a2 |
     g4 b8 a g fis a4 |
     a g2 fis4 |
-    g 2 a4 |
+    g g2 a4 |
     b a ~ |
     a8 fis g a b c d g, |
     g4 a2 g4 ~ |
     g fis2 e4 |
-    fisis 2 fis4 |
+    fis fis2 fis4 |
     fis b cis2 |
     d4 b a2 |
     g fis |
-    g8 b e d c a d c|
+    g8 b e d c a d c |
     b g c b a fis b a |
     g e a g fis d g d |
     e4 e fis fis |
