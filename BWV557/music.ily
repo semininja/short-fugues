@@ -59,7 +59,7 @@ tptAfug = {
     b4. c16 b a4. b16 a |
     g8 fis g a16 g fis4 r4 |
     R1*2 |
-    r2 r4 b ~ |
+    r2 e4 b' ~ |
     8 g a4 ~ 8 fis g a16 b |
     c4 r8 a b4 r8 g |
     a4 r8 fis g4 r8 e |
@@ -308,7 +308,7 @@ tubafug = {
     g1 |
     c4 r r2 |
     R1*3 |
-    d4 g4 ~ 8 e fis4 ~ |
+    d,4 g4 ~ 8 e fis4 ~ |
     fis8 d e4 ~ e8 c d4 ~ |
     d8 b cis4 d2 ~ |
     d1 |
