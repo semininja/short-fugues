@@ -1,5 +1,5 @@
 %BWV 558
-\version "2.22.1"
+\version "2.23.8"
 
 \bookOutputName "BWV558"
 
@@ -11,7 +11,7 @@
 prelude = {
   \key g \minor
   \time 3/2
-  \tempo 4 = 90
+  \tempo 2 = 60
   s1.*37
   \bar "|."
 }
@@ -20,7 +20,7 @@ fugue = {
   \key g \minor
   \time 4/4
   \tempo 4 = 70
-  s1.*44
+  s1*45
   \bar "|."
 }
 
@@ -60,7 +60,41 @@ tptApre = {
 }
 tptAfug = {
   \relative f' {
-    
+    d'2 ees8 d ees c |
+    d4 r8 g, a a d c |
+    bes g d' d bes g ees'4 ~ |
+    4 d2 c4 ~ |
+    c8 bes16 a bes8 c d4 g ~ |
+    8 cis, d2 cis4 |
+    d r8 c d4 r8 d |
+    c c c d16 c bes8 8 8 c16 bes |
+    a4. d8 ~ 4 c ~ |
+    8 a bes4 a2 |
+    bes4 r8 a bes4 r8 c |
+    a a d4 g,8 g c4 |
+    fis,8 8 g4 ~ 8 a16 g fis8.\trill g16 |
+    g8 a bes c d4 r8 d |
+    cis4 d2 c4 |
+    d r8 cis d4 r8 d |
+    c c c d16 c bes8 8 8 c16 bes |
+    a8 a a bes16 a g8 g g a16 g |
+    f8 a d2 cis4 |
+    d f ees2 |
+    d c |
+    bes a4 bes ~ |
+    4. a8 bes4 r8 d |
+    ees ees ees f16 ees d8 d d ees16 d |
+    c8 c c d16 c bes8 c d ees |
+    R1*11 |
+    d2 ees8 d ees c |
+    d4 r8 g, a a d c |
+    bes g d' d bes g ees'4 ~ |
+    4 d2 r4 |
+    R1 |
+    r4. d8 c c c d16 c |
+    bes8 a g2 fis4  |
+    g2 ~ 4. fis8 |
+    g1\fermata |
   }
 }
 tptBpre = {
@@ -105,7 +139,44 @@ tptBpre = {
 }
 tptBfug = {
   \relative f' {
-    
+    R1*4 |
+    g2 bes8 a bes g |
+    a4 r8 d, e e a g |
+    f d a' a f d bes'4 ~ |
+    4 a2 g4 ~ |
+    g fis g2 |
+    fis4 g2 fis4 |
+    g r8 fis g4 r8 g |
+    f f f g16 f ees8 8 8 f16 ees |
+    d8 d d4 c2 |
+    d4 g ~ g r8 bes |
+    a4 a g a ~ |
+    a r8 a a4 g ~ |
+    g a f g |
+    e f d cis |
+    d r8 f e2 |
+    f4 bes2 a4 ~ |
+    a g2 f4 ~ |
+    4 ees ~ 8 f16 ees d4 |
+    R1*3 |
+    a'4. d8 ~ 4 c ~ |
+    8 bes16 a bes4 a2 |
+    bes4 r8 a bes4 r8 c |
+    a a bes4 g8 g a4 |
+    fis8 8 g2 fis4 |
+    g2 aes8 g aes f |
+    g4 r8 c, d d g f |
+    ees c g' g ees c aes'4 ~ |
+    4 g2 f4 ~ |
+    f8 d ees4 d2 |
+    ees8 f g4 fis fis |
+    R1*3 |
+    r2 r4 c' ~ |
+    4 bes a2 ~ |
+    4 g2 fis4 |
+    d r r2 |
+    r r4 r8 c |
+    d1\fermata |
   }
 }
 hnpre = {
@@ -151,7 +222,44 @@ hnpre = {
 }
 hnfug = {
   \relative f {
-    
+    R1*8 |
+    d'2 ees8 d ees c |
+    d4 r8 g, a a d c |
+    bes g d' d bes g ees'4 ~ |
+    4 d2 c4 ~ |
+    c bes8 a16 g a2 |
+    bes8 c d4 ~ 4 r8 g ~ |
+    g f16 e f4 e e |
+    f r8 e f4 d |
+    e f d e |
+    cis d b g |
+    a r8 a bes4 a |
+    a r8 d c c c d16 c |
+    bes8 8 8 c16 bes a8 a a bes16 a |
+    g8 g g a16 g f4 r |
+    c'8 d16 ees d8 c d4 4 |
+    c2 bes |
+    a g4 g' ~ |
+    g fis g2 |
+    fis4 g2 fis4 |
+    g r8 fis g4 r8 g |
+    f f f g16 f ees8 8 8 f16 ees |
+    d8 d d ees16 d c8 c c d16 c |
+    bes8 b c4 ~ 4 r8 d |
+    ees4 r8 aes, ~ 4 g ~ |
+    4 r8 8 4 r8 ees' |
+    d d d ees16 d c8 c c d16 c |
+    b4 c2 b4\trill |
+    c8 d ees4 d a' ~ |
+    a g8 bes c bes c a |
+    f fis g4 ees d ~ |
+    d r8 8 4 r8 bes' |
+    a a a bes16 a g8 g g a16 g |
+    fis4 g2 fis4 |
+    d4. r8 r2 |
+    r4 d ~4. c8 |
+    b4 c ~ 8 d16 c b8 a |
+    b1\fermata |
   }
 }
 euphpre = {
@@ -164,7 +272,7 @@ euphpre = {
     a |
     g |
     a8 d c d a d c d a d c d |
-    b1. |
+    g,1. |
     g |
     a |
     f |
@@ -197,7 +305,39 @@ euphpre = {
 }
 euphfug = {
   \relative f {
-    
+    R1*13 |
+    g2 bes8 a bes g |
+    a4 r8 d, e e a g |
+    f d a' a f d bes'4 ~ |
+    4 a2 g4 ~ |
+    g f e2 |
+    d4 r8 d g e a a, |
+    d4 r r2 |
+    R1 |
+    r2 r4 bes8 d |
+    ees c f f, bes4 bes' ~ |
+    4 a2 g4 ~ |
+    g fis g8 a bes c |
+    d4 a g a ~ |
+    a r8 d c4 d ~ |
+    d r8 d d4 g, |
+    c f, bes ees, |
+    a g a c, |
+    d8 f ees e f4 r8 bes |
+    ees, f g aes b,2 |
+    c4 r8 b c4 r8 c' |
+    bes8 8 8 c16 bes aes8 8 8 bes16 aes |
+    g4 r8 c, f d g g, |
+    c4 r8 c' ~ c c c d16 c |
+    bes8 a bes g c4 r8 f, |
+    bes a bes4 c a |
+    bes r8 a bes4 r8 bes |
+    c c a4 bes8 8 g4 |
+    a r8 d c c c d16 c |
+    bes8 8 8 c16 bes a4 d |
+    g,8 a bes a16 g a4 d, |
+    ees8 8 8 f16 ees d2 ~ |
+    d1\fermata |
   }
 }
 tubapre = {
@@ -236,14 +376,29 @@ tubapre = {
     bes r r |
     c d d, |
     g1. |
-    r2 e'1 |
+    r2 e1 |
     d1. |
     g, |
   }
 }
 tubafug = {
   \relative f, {
-    
+    R1*25 |
+    d'2 ees8 d ees c |
+    d4 r8 g, a a d c |
+    bes g d' d bes g ees'4 ~ |
+    4 d2 c4 ~ |
+    c bes a2 |
+    g4 r r2 |
+    R1*6 |
+    r4 g2 fis4 |
+    g r8 fis g4 r8 g |
+    f f f g16 f ees8 8 8 f16 ees |
+    d4 r d2 ~ |
+    1 ~ |
+    1 |
+    g1 ~ |
+    1\fermata |
   }
 }
 
@@ -281,3 +436,6 @@ tubafug = {
   \tubafug
 }
 %}
+
+\include "../score.ily"
+\include "../midi.ily"
