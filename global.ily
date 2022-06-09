@@ -1,4 +1,4 @@
-\version "2.22.1"
+\version "2.23.8"
 
 \header {
   composer = "J. S. Bach"
@@ -14,7 +14,7 @@
   % copied from ly/titling-init.ly, added \fontsize #2 \bold
   scoreTitleMarkup = \markup {
     \column {
-      \on-the-fly \print-all-headers { \bookTitleMarkup \hspace #1 }
+      \if \should-print-all-headers { \bookTitleMarkup \hspace #1 }
       \fill-line {
         \fontsize #0 \bold \fromproperty #'header:piece
         \fromproperty #'header:opus
@@ -27,7 +27,7 @@
   \context {
     \Score
     \override BarNumber.break-visibility = ##(#f #t #t)
-    markFormatter = #format-mark-box-barnumbers
+    rehearsalMarkFormatter = #format-mark-box-barnumbers
     \compressEmptyMeasures
   }
   

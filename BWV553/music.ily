@@ -1,5 +1,5 @@
 %BWV 553
-\version "2.22.1"
+\version "2.23.8"
 
 \bookOutputName "BWV553"
 
@@ -96,13 +96,16 @@ tptAfug = {
     g4 g a r |
     r2 r4 g ~ |
     g8 a16 g fis8.\trill g16 g4 r |
-    R1*3 | 
+    R1*2 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
+    \cueDuring #"hn" #DOWN { R1 } |
     c8 e16 d c e d c b c b c d4 |
     e4 ~ 8 d16 e a, b a b c4 |
     d ~ 8 c16 d g, a g a b4 |
     a16 b a b c4 b16 c b c d e d e |
     c8 d b8.\trill a16 a4 r |
-    R1 |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
+    \cueDuring #"tptB" #DOWN { R1 } |
     r8 c c c e4 r8 d |
     c c c b16 c d4 r8 c |
     b b b a16 b c4 r8 b |
@@ -328,7 +331,7 @@ tubapre = {
       d4 r r2
       r4 r8 g fis g d4 |
       \tag #'part { \new CueVoice { \set instrumentCueName = "Euph." } }
-      \cueDuring #"euphp" #UP { g, r r16 g' f? g } e g d g |
+      \cueDuring #"euphp" #UP { \stemUp g, r } r16 \stemNeutral g' f? g e g d g |
     }
     \repeat volta 2 {
       \mark \default c,4 r f r |
@@ -397,3 +400,7 @@ tubafug = {
 \addQuote "tuba" {
   \tubafug
 }
+
+\include "../score.ily"
+\include "../parts.ily"
+\include "../midi.ily"
