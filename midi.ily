@@ -1,6 +1,5 @@
-\version "2.22.1"
+\version "2.23.8"
 
-\include "music.ily"
 \include "articulate.ly"
 
 \book {
@@ -8,7 +7,7 @@
     \articulate
     \unfoldRepeats
     \killCues
-    \removeWithTag #'part
+    %\removeWithTag #'part
     <<
         \new Staff \with {
           midiInstrument = "trumpet"

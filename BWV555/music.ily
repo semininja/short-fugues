@@ -1,5 +1,5 @@
 %BWV 555
-\version "2.22.1"
+\version "2.23.8"
 
 \bookOutputName "BWV555"
 
@@ -16,6 +16,7 @@ prelude = {
   \time 2/4 s2
   \time 4/4
   s1*3
+  \once \override Score.BarNumber.stencil = ##f
   \mark \default
   s1
   \time 2/4 s2
@@ -521,3 +522,7 @@ tubafug = {
 \addQuote "tuba" {
   \tubafug
 }
+
+\include "../score.ily"
+\include "../parts.ily"
+\include "../midi.ily"

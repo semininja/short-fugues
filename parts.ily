@@ -1,9 +1,4 @@
-\version "2.22.1"
-
-\include "global.ily"
-\include "music.ily"
-
-#(set-global-staff-size 20)
+\version "2.23.8"
 
 \paper {
   top-margin = 0.3\in
@@ -14,6 +9,7 @@
 
 
 \book {
+  #(set-global-staff-size 20)
   \bookOutputSuffix "tptA"
   \header { instrument = "Trumpet 1" }
   \score {
@@ -42,6 +38,7 @@
   }
 }
 \book {
+  #(set-global-staff-size 20)
   \bookOutputSuffix "tptB"
   \header { instrument = "Trumpet 2" }
   \score {
@@ -70,6 +67,7 @@
   }
 }
 \book {
+  #(set-global-staff-size 20)
   \bookOutputSuffix "horn"
   \header { instrument = "F Horn" }
   \score {
@@ -98,6 +96,7 @@
   }
 }
 \book {
+  #(set-global-staff-size 20)
   \bookOutputSuffix "euph-treble"
   \header { instrument = "Euphonium T.C." }
   \score {
@@ -128,6 +127,7 @@
   }
 }
 \book {
+  #(set-global-staff-size 20)
   \bookOutputSuffix "euph"
   \header { instrument = "Euphonium" }
   \score {
@@ -156,6 +156,7 @@
   }
 }
 \book {
+  #(set-global-staff-size 20)
   \bookOutputSuffix "tuba"
   \header { instrument = "Tuba" }
   \score {
