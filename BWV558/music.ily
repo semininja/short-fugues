@@ -342,7 +342,7 @@ euphfug = {
 }
 tubapre = {
   \relative f, {
-    g1. |
+    g,1. |
     c |
     f, |
     bes |
@@ -376,7 +376,7 @@ tubapre = {
     bes r r |
     c d d, |
     g1. |
-    r2 e1 |
+    r2 e'1 |
     d1. |
     g, |
   }
@@ -384,20 +384,20 @@ tubapre = {
 tubafug = {
   \relative f, {
     R1*25 |
-    d'2 ees8 d ees c |
+    d2 ees8 d ees c |
     d4 r8 g, a a d c |
     bes g d' d bes g ees'4 ~ |
     4 d2 c4 ~ |
     c bes a2 |
     g4 r r2 |
     R1*6 |
-    r4 g2 fis4 |
+    r4 g'2 fis4 |
     g r8 fis g4 r8 g |
     f f f g16 f ees8 8 8 f16 ees |
     d4 r d2 ~ |
     1 ~ |
     1 |
-    g1 ~ |
+    g,1 ~ |
     1\fermata |
   }
 }
@@ -438,4 +438,5 @@ tubafug = {
 %}
 
 \include "../score.ily"
+\include "../parts.ily"
 \include "../midi.ily"
