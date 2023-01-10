@@ -1,12 +1,10 @@
 %BWV 555
-\version "2.22.1"
+\version "2.24.0"
 
 \bookOutputName "BWV555"
-
-\header {
-  title = "Prelude & Fugue No. 3"
-  subtitle = "BWV 555"
-}
+piece = "No. 3 in E minor, BWV 555"
+title = "Prelude & Fugue No. 3 in E minor"
+subtitle = "BWV 555"
 
 prelude = {
   \key e \minor
@@ -16,12 +14,12 @@ prelude = {
   \time 2/4 s2
   \time 4/4
   s1*3
-  \mark \default
+  \box
   s1
   \time 2/4 s2
   \time 4/4
   s1*4
-  \mark \default
+  \box
   s1*11
   \bar "|."
 }
@@ -31,15 +29,15 @@ fugue = {
   \time 3/4
   \tempo 4 = 120
   s2.*19
-  \mark \default
+  \box
   s2.*8
-  \mark \default
+  \box
   s2.*10
-  \mark \default
+  \box
   s2.*7
-  \mark \default
+  \box
   s2.*9
-  \mark \default
+  \box
   s2.*17
   \time 3/2
   s1.
@@ -47,7 +45,7 @@ fugue = {
   \bar "|."
 }
 
-tptApre = {
+tptpre = {
   \relative f' {
     r4 b a4. b8 |
     g4. g8 ~ g g fis e |
@@ -77,7 +75,8 @@ tptApre = {
     e1 |
   }
 }
-tptAfug = {
+
+tptfug = {
   \relative f' {
     e2. | fis |
     g2 gis4 |
@@ -114,7 +113,7 @@ tptAfug = {
     r4 g'8 fis e d |
     cis4 a'8 g fis e |
     dis2 e4 ~ |
-    e2 dis4 
+    e2 dis4
     e d c |
     b2. |
     a |
@@ -149,7 +148,8 @@ tptAfug = {
     e\breve
   }
 }
-tptBpre = {
+
+corpre = {
   \relative f' {
     r4 e4 ~ 8 e dis4 |
     r8 b e e e4 c |
@@ -178,10 +178,11 @@ tptBpre = {
     b1 |
   }
 }
-tptBfug = {
+
+corfug = {
   \relative f' {
-    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 1" } }
-    \cueDuring #"tptA" #UP { R2.*7 } |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt." } }
+    \cueDuring #"tpt" #UP { R2.*7 } |
     b,2. |
     cis |
     d2 dis4 |
@@ -247,6 +248,7 @@ tptBfug = {
     b\breve
   }
 }
+
 hnpre = {
   \relative f {
     r4 g' fis fis, |
@@ -273,11 +275,12 @@ hnpre = {
     g,1 |
   }
 }
+
 hnfug = {
   \relative f {
     R2.*7 |
-    \tag #'part { \new CueVoice { \set instrumentCueName = "Tpt. 2" } }
-    \cueDuring #"tptB" #DOWN { R2.*8 } |
+    \tag #'part { \new CueVoice { \set instrumentCueName = "Cor." } }
+    \cueDuring #"cor" #DOWN { R2.*8 } |
     e2. |
     fis |
     g2 gis4 |
@@ -332,6 +335,7 @@ hnfug = {
     e\breve
   }
 }
+
 euphpre = {
   \relative f {
     r4 g a b ~ |
@@ -362,6 +366,7 @@ euphpre = {
     e1 |
   }
 }
+
 euphfug = {
   \relative f {
     R2.*15 |
@@ -422,6 +427,7 @@ euphfug = {
     g\breve
   }
 }
+
 tubapre = {
   \relative f, {
     e2 fis4 b, |
@@ -431,7 +437,7 @@ tubapre = {
     b e |
     a,4 c |
     d2. 4 |
-    g, b c r8 a 
+    g, b c r8 a
     d4 g, d'2 |
     g,4 g'8 fis e4 d |
     g a |
@@ -452,11 +458,12 @@ tubapre = {
     e,1 |
   }
 }
+
 tubafug = {
   \relative f, {
     R2.*15 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Horn" } }
-    \cueDuring #"hn" #UP { R2.*4 | } 
+    \cueDuring #"hn" #UP { R2.*4 | }
     b,2. |
     cis |
     d2 dis4 |
@@ -483,7 +490,7 @@ tubafug = {
     e2. |
     R2.*6 |
     \tag #'part { \new CueVoice { \set instrumentCueName = "Euph." } }
-    \cueDuring #"euph" #UP { R2.*2 | } 
+    \cueDuring #"euph" #UP { R2.*2 | }
     a,2. |
     b |
     c2 cis4 |
@@ -502,15 +509,121 @@ tubafug = {
     b a g |
     fis2. ||
     e2 b' b, |
-    e,\breve 
+    e,\breve
   }
 }
 
-\addQuote "tptA" {
-  \tptAfug
+tptPrelude = {
+  \clef "treble"
+  \transposition bes
+  \new Voice \transpose bes c' {
+    <<
+      \prelude
+      \tptpre
+    >>
+  }
 }
-\addQuote "tptB" {
-  \tptBfug
+
+tptFugue = {
+  \clef "treble"
+  \transposition bes
+  \new Voice \transpose bes c' {
+    <<
+      \fugue
+      \tptfug
+    >>
+  }
+}
+
+corPrelude = {
+  \clef "treble"
+  \transposition bes
+  \new Voice \transpose bes c' {
+    <<
+      \prelude
+      \corpre
+    >>
+  }
+}
+
+corFugue = {
+  \clef "treble"
+  \transposition bes
+  \new Voice \transpose bes c' {
+    <<
+      \fugue
+      \corfug
+    >>
+  }
+}
+
+hnPrelude = {
+  \clef "treble"
+  \transposition f
+  \new Voice \transpose f c' {
+    <<
+      \prelude
+      \hnpre
+    >>
+  }
+}
+
+hnFugue = {
+  \clef "treble"
+  \transposition f
+  \new Voice \transpose f c' {
+    <<
+      \fugue
+      \hnfug
+    >>
+  }
+}
+
+euphPrelude = {
+  \clef "bass"
+  \new Voice {
+    <<
+      \prelude
+      \euphpre
+    >>
+  }
+}
+
+euphFugue = {
+  \clef "bass"
+  \new Voice {
+    <<
+      \fugue
+      \euphfug
+    >>
+  }
+}
+
+tubaPrelude = {
+  \clef "bass"
+  \new Voice {
+    <<
+      \prelude
+      \tubapre
+    >>
+  }
+}
+
+tubaFugue = {
+  \clef "bass"
+  \new Voice {
+    <<
+      \fugue
+      \tubafug
+    >>
+  }
+}
+
+\addQuote "tpt" {
+  \tptfug
+}
+\addQuote "cor" {
+  \corfug
 }
 \addQuote "hn" {
   \hnfug

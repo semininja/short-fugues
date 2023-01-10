@@ -1,10 +1,10 @@
-\version "2.22.1"
+\version "2.24.0"
 
-\include "music.ily"
 \include "articulate.ly"
 
 \book {
   \score {
+    \bookOutputSuffix "prelude"
     \articulate
     \unfoldRepeats
     \killCues
@@ -15,11 +15,7 @@
         } {
           <<
             \prelude
-            \tptApre
-          >>
-          <<
-            \fugue
-            \tptAfug
+            \tptpre
           >>
         }
         \new Staff \with {
@@ -27,11 +23,7 @@
         } {
           <<
             \prelude
-            \tptBpre
-          >>
-          <<
-            \fugue
-            \tptBfug
+            \corpre
           >>
         }
         \new Staff \with {
@@ -41,10 +33,6 @@
             \prelude
             \hnpre
           >>
-          <<
-            \fugue
-            \hnfug
-          >>
         }
         \new Staff \with {
           midiInstrument = "trombone"
@@ -52,10 +40,6 @@
           <<
             \prelude
             \euphpre
-          >>
-          <<
-            \fugue
-            \euphfug
           >>
         }
         \new Staff \with {
@@ -65,6 +49,54 @@
             \prelude
             \tubapre
           >>
+        }
+      >>
+    \midi { }
+  }
+}
+\book {
+  \score {
+    \bookOutputSuffix "fugue"
+    \articulate
+    \unfoldRepeats
+    \killCues
+    \removeWithTag #'part
+    <<
+        \new Staff \with {
+          midiInstrument = "trumpet"
+        } {
+          <<
+            \fugue
+            \tptfug
+          >>
+        }
+        \new Staff \with {
+          midiInstrument = "trumpet"
+        } {
+          <<
+            \fugue
+            \corfug
+          >>
+        }
+        \new Staff \with {
+          midiInstrument = "french horn"
+        } {
+          <<
+            \fugue
+            \hnfug
+          >>
+        }
+        \new Staff \with {
+          midiInstrument = "trombone"
+        } {
+          <<
+            \fugue
+            \euphfug
+          >>
+        }
+        \new Staff \with {
+          midiInstrument = "tuba"
+        } {
           <<
             \fugue
             \tubafug

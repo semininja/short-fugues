@@ -1,146 +1,81 @@
-\version "2.22.1"
-
-\include "global.ily"
-\include "music.ily"
-
-#(set-global-staff-size 16)
+\version "2.24.0"
 
 \paper {
   top-margin = 0.5\in
-  left-margin = 0.9\in
-  right-margin = 0.6\in
+  left-margin = 0.8\in
+  right-margin = 0.5\in
   bottom-margin = 0.25\in
 }
-
-\score { %Prelude
-  \header { piece = "Prelude" }
+\header {
+  title = \title
+  subtitle = \subtitle
+  instrument = ##f
+}
+\score {
+  %Prelude
+  \header {
+    piece = "Prelude"
+  }
+  \layout{
+    #(layout-set-staff-size 15)
+  }
   \new Score {
     %\killCues
     %\removeWithTag #'part
     \new StaffGroup <<
       \new Staff \with {
-        instrumentName = #"Trumpet 1"
-        shortInstrumentName = #"Tpt. 1"
-      } {
-        \transposition bes
-        \new Voice \transpose bes c'
-        <<
-          \prelude
-          \tptApre
-        >>
-      }
+        instrumentName = #"Trumpet"
+        shortInstrumentName = #"Tpt."
+      } \tptPrelude
       \new Staff \with {
-        instrumentName = #"Trumpet 2"
-        shortInstrumentName = #"Tpt. 2"
-      } {
-        \transposition bes
-        \new Voice \transpose bes c'
-        <<
-          \prelude
-          \tptBpre
-        >>
-      }
+        instrumentName = #"Cornet"
+        shortInstrumentName = #"Cor."
+      } \corPrelude
       \new Staff \with {
         instrumentName = #"F Horn"
         shortInstrumentName = #"Hn."
-      } {
-        \transposition f
-        \new Voice \transpose f c'
-        <<
-          \prelude
-          \hnpre
-        >>
-      }
+      } \hnPrelude
       \new Staff \with {
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
-      } {
-        \new Voice {
-          \clef "bass"
-          <<
-            \prelude
-            \euphpre
-          >>
-        }
-      }
+      } \euphPrelude
       \new Staff \with {
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
-      } {
-        \new Voice {
-          \clef "bass"
-          <<
-            \prelude
-            \tubapre
-          >>
-        }
-      }
+      } \tubaPrelude
     >>
   }
 }
-\score { %Fugue
+\score {
+  %Fugue
   \header { piece = "Fugue" }
+  \layout{
+    #(layout-set-staff-size 15)
+  }
   \new Score {
     %\killCues
     %\removeWithTag #'part
     \new StaffGroup <<
       \new Staff \with {
-        instrumentName = #"Trumpet 1"
-        shortInstrumentName = #"Tpt. 1"
-      } {
-        \transposition bes
-        \new Voice \transpose bes c'
-        <<
-          \fugue
-          \tptAfug
-        >>
-      }
+        instrumentName = #"Trumpet"
+        shortInstrumentName = #"Tpt."
+      } \tptFugue
       \new Staff \with {
-        instrumentName = #"Trumpet 2"
-        shortInstrumentName = #"Tpt. 2"
-      } {
-        \transposition bes
-        \new Voice \transpose bes c'
-        <<
-          \fugue
-          \tptBfug
-        >>
-      }
+        instrumentName = #"Cornet"
+        shortInstrumentName = #"Cor."
+      } \corFugue
       \new Staff \with {
         instrumentName = #"F Horn"
         shortInstrumentName = #"Hn."
-      } {
-        \transposition f
-        \new Voice \transpose f c'
-        <<
-          \fugue
-          \hnfug
-        >>
-      }
+      } \hnFugue
       \new Staff \with {
         instrumentName = #"Euphonium"
         shortInstrumentName = #"Euph."
-      } {
-        \new Voice {
-          \clef "bass"
-          <<
-            \fugue
-            \euphfug
-          >>
-        }
-      }
+      } \euphFugue
       \new Staff \with {
         instrumentName = #"Tuba"
         shortInstrumentName = #"Tuba"
-      } {
-        \new Voice {
-          \clef "bass"
-          <<
-            \fugue
-            \tubafug
-          >>
-        }
-      }
+      } \tubaFugue
     >>
   }
 }

@@ -1,21 +1,18 @@
-\version "2.22.1"
+\version "2.23.12"
 
-\include "global.ily"
-\include "music.ily"
+partHeader = \header { instrument = "Trumpet" }
+partPrelude = \tptApre
+partFugue = \tptAfug
 
-#(set-global-staff-size 20)
-
-\paper {
-  top-margin = 0.3\in
-  left-margin = 0.5\in
-  right-margin = 0.6\in
-  bottom-margin = 0.25\in
-}
-
-
-\book {
-  \bookOutputSuffix "tptA"
-  \header { instrument = "Trumpet 1" }
+part = \bookpart { % Trumpet
+  \paper {
+    top-margin = 0.3\in
+    left-margin = 0.5\in
+    right-margin = 0.5\in
+    bottom-margin = 0.25\in
+  }
+  \pieceHeader
+  \partHeader
   \score {
     \header { piece = "Prelude" }
     \new Staff {
@@ -23,94 +20,136 @@
       \new Voice \transpose bes c' {
         <<
           \prelude
-          \tptApre
+          \partPrelude
         >>
       }
+    }
+    \layout{
+      #(layout-set-staff-size 18)
     }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
       \transposition bes
-      \new Voice \transpose bes c' { 
+      \new Voice \transpose bes c' {
         <<
           \fugue
-          \tptAfug
+          \partFugue
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
 }
-\book {
-  \bookOutputSuffix "tptB"
-  \header { instrument = "Trumpet 2" }
+
+\part
+
+\bookpart { % Cornet
+  \paper {
+    top-margin = 0.3\in
+    left-margin = 0.5\in
+    right-margin = 0.5\in
+    bottom-margin = 0.25\in
+  }
+  \pieceHeader
+  \header { instrument = "Cornet" }
   \score {
     \header { piece = "Prelude" }
     \new Staff {
       \transposition bes
-      \new Voice \transpose bes c' { 
+      \new Voice \transpose bes c' {
         <<
           \prelude
           \tptBpre
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
       \transposition bes
-      \new Voice \transpose bes c' { 
+      \new Voice \transpose bes c' {
         <<
           \fugue
           \tptBfug
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
 }
-\book {
-  \bookOutputSuffix "horn"
+\bookpart { % Horn
+  \paper {
+    top-margin = 0.3\in
+    left-margin = 0.5\in
+    right-margin = 0.5\in
+    bottom-margin = 0.25\in
+  }
+  \pieceHeader
   \header { instrument = "F Horn" }
   \score {
     \header { piece = "Prelude" }
     \new Staff {
       \transposition f
-      \new Voice \transpose f c' { 
+      \new Voice \transpose f c' {
         <<
           \prelude
           \hnpre
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
   \score {
     \header { piece = "Fugue" }
     \new Staff {
       \transposition f
-      \new Voice \transpose f c' { 
+      \new Voice \transpose f c' {
         <<
           \fugue
           \hnfug
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
 }
-\book {
-  \bookOutputSuffix "euph-treble"
+\bookpart { % Euph TC
+  \paper {
+    top-margin = 0.3\in
+    left-margin = 0.5\in
+    right-margin = 0.5\in
+    bottom-margin = 0.25\in
+  }
+  \pieceHeader
   \header { instrument = "Euphonium T.C." }
   \score {
     \header { piece = "Prelude" }
     \new Staff {
       \clef "treble"
       \transposition bes,
-      \new Voice \transpose bes c' {
+      \new Voice \transpose bes, c' {
         <<
           \prelude
           \euphpre
         >>
       }
+    }
+    \layout{
+      #(layout-set-staff-size 18)
     }
   }
   \score {
@@ -118,17 +157,26 @@
     \new Staff {
       \clef "treble"
       \transposition bes,
-      \new Voice \transpose bes c' {
+      \new Voice \transpose bes, c' {
         <<
           \fugue
           \euphfug
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
 }
-\book {
-  \bookOutputSuffix "euph"
+\bookpart { % Euph
+  \paper {
+    top-margin = 0.3\in
+    left-margin = 0.5\in
+    right-margin = 0.5\in
+    bottom-margin = 0.25\in
+  }
+  \pieceHeader
   \header { instrument = "Euphonium" }
   \score {
     \header { piece = "Prelude" }
@@ -141,6 +189,9 @@
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
   \score {
     \header { piece = "Fugue" }
@@ -153,10 +204,19 @@
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
 }
-\book {
-  \bookOutputSuffix "tuba"
+\bookpart { % Tuba
+  \paper {
+    top-margin = 0.3\in
+    left-margin = 0.5\in
+    right-margin = 0.5\in
+    bottom-margin = 0.25\in
+  }
+  \pieceHeader
   \header { instrument = "Tuba" }
   \score {
     \header { piece = "Prelude" }
@@ -169,6 +229,9 @@
         >>
       }
     }
+    \layout{
+      #(layout-set-staff-size 18)
+    }
   }
   \score {
     \header { piece = "Fugue" }
@@ -180,6 +243,9 @@
           \tubafug
         >>
       }
+    }
+    \layout{
+      #(layout-set-staff-size 18)
     }
   }
 }
